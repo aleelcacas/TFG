@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: eea96eb029b5a5b44b3781e07d7b3b51
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8521813897010321978
+    second: Rubi_Walk_0
+  - first:
+      213: -224410096293416650
+    second: Rubi_Walk_1
+  - first:
+      213: -575482776625529142
+    second: Rubi_Walk_2
+  - first:
+      213: -8522429596362977996
+    second: Rubi_Walk_3
+  - first:
+      213: 3259627183532321496
+    second: Rubi_Walk_4
+  - first:
+      213: -3918323349925171571
+    second: Rubi_Walk_5
+  - first:
+      213: -3896504935972650353
+    second: Rubi_Walk_6
+  - first:
+      213: -4603324376156711924
+    second: Rubi_Walk_7
+  - first:
+      213: 8497716853184188614
+    second: Rubi_Walk_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rubi_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 48
+        height: 61
+      alignment: 9
+      pivot: {x: 0.6107483, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a994db690934670800000000000000
+      internalID: 8521813897010321978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 48
+        height: 62
+      alignment: 9
+      pivot: {x: 0.60880566, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6317b66d43cb2ecf0800000000000000
+      internalID: -224410096293416650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 0
+        width: 45
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5608439, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace31e4b6797308f0800000000000000
+      internalID: -575482776625529142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 0
+        width: 48
+        height: 62
+      alignment: 9
+      pivot: {x: 0.60397595, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d42859f6f3ab980800000000000000
+      internalID: -8522429596362977996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 0
+        width: 49
+        height: 61
+      alignment: 9
+      pivot: {x: 0.58605707, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8daa6a637a58c3d20800000000000000
+      internalID: 3259627183532321496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 0
+        width: 49
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5775632, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e67946ca15f99c0800000000000000
+      internalID: -3918323349925171571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 0
+        width: 52
+        height: 61
+      alignment: 9
+      pivot: {x: 0.59622073, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f824bc1c765dce9c0800000000000000
+      internalID: -3896504935972650353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 0
+        width: 50
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5855432, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04584d8ed4bd10c0800000000000000
+      internalID: -4603324376156711924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 0
+        width: 49
+        height: 61
+      alignment: 9
+      pivot: {x: 0.61632055, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0d4e38474fde570800000000000000
+      internalID: 8497716853184188614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 30cd1237fd8233a4480ab68260fa491e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rubi_Walk_0: 8521813897010321978
+      Rubi_Walk_1: -224410096293416650
+      Rubi_Walk_2: -575482776625529142
+      Rubi_Walk_3: -8522429596362977996
+      Rubi_Walk_4: 3259627183532321496
+      Rubi_Walk_5: -3918323349925171571
+      Rubi_Walk_6: -3896504935972650353
+      Rubi_Walk_7: -4603324376156711924
+      Rubi_Walk_8: 8497716853184188614
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

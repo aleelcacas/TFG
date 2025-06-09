@@ -1,0 +1,476 @@
+fileFormatVersion: 2
+guid: 00dbf750355cb7f4b8398d23d9b6072a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2781984258815275760
+    second: Rubi_Ataque_0
+  - first:
+      213: -5219866975997691510
+    second: Rubi_Ataque_1
+  - first:
+      213: 4061584464627587503
+    second: Rubi_Ataque_2
+  - first:
+      213: 3166763104051403294
+    second: Rubi_Ataque_3
+  - first:
+      213: -2428344398954894369
+    second: Rubi_Ataque_4
+  - first:
+      213: 7168112551844106872
+    second: Rubi_Ataque_5
+  - first:
+      213: -4486402285851349180
+    second: Rubi_Ataque_6
+  - first:
+      213: 2843402170098858387
+    second: Rubi_Ataque_7
+  - first:
+      213: -7928796561732385461
+    second: Rubi_Ataque_8
+  - first:
+      213: -3599437046240693069
+    second: Rubi_Ataque_9
+  - first:
+      213: -3188319858365665313
+    second: Rubi_Ataque_10
+  - first:
+      213: 2386961477769013500
+    second: Rubi_Ataque_11
+  - first:
+      213: -7870174761629665163
+    second: Rubi_Ataque_12
+  - first:
+      213: -4553899920007904145
+    second: Rubi_Ataque_13
+  - first:
+      213: -204153734031597212
+    second: Rubi_Ataque_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rubi_Ataque_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 46
+        height: 60
+      alignment: 9
+      pivot: {x: 0.63, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2b96d91f79b9620800000000000000
+      internalID: 2781984258815275760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 56
+        height: 57
+      alignment: 9
+      pivot: {x: 0.66, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a897dd034ae4f87b0800000000000000
+      internalID: -5219866975997691510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 56
+        height: 57
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa95f572d85ad5830800000000000000
+      internalID: 4061584464627587503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_3
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 0
+        width: 60
+        height: 57
+      alignment: 9
+      pivot: {x: 0.6426442, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a1cc0d34a92fb20800000000000000
+      internalID: 3166763104051403294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_4
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 0
+        width: 60
+        height: 57
+      alignment: 9
+      pivot: {x: 0.6422292, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdbebf392a9cc4ed0800000000000000
+      internalID: -2428344398954894369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_5
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 0
+        width: 64
+        height: 57
+      alignment: 9
+      pivot: {x: 0.6636572, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872dfaa33604a7360800000000000000
+      internalID: 7168112551844106872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_6
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 0
+        width: 67
+        height: 61
+      alignment: 9
+      pivot: {x: 0.63348025, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f645814e81db1c0800000000000000
+      internalID: -4486402285851349180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_7
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 0
+        width: 68
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5888609, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 399315e653bc57720800000000000000
+      internalID: 2843402170098858387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_8
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 0
+        width: 88
+        height: 72
+      alignment: 9
+      pivot: {x: 0.46628916, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b454a91298147f190800000000000000
+      internalID: -7928796561732385461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_9
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 0
+        width: 83
+        height: 57
+      alignment: 9
+      pivot: {x: 0.49476862, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4317bb31b3c0ec0800000000000000
+      internalID: -3599437046240693069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_10
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 0
+        width: 69
+        height: 57
+      alignment: 9
+      pivot: {x: 0.59325993, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf6ac33bffc0c3d0800000000000000
+      internalID: -3188319858365665313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_12
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 0
+        width: 66
+        height: 57
+      alignment: 9
+      pivot: {x: 0.6366096, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578b1d490c587c290800000000000000
+      internalID: -7870174761629665163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rubi_Ataque_14
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 0
+        width: 46
+        height: 60
+      alignment: 9
+      pivot: {x: 0.6308567, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4612a73b243ba2df0800000000000000
+      internalID: -204153734031597212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 253aa7a6934819446994262a591908c7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rubi_Ataque_0: 2781984258815275760
+      Rubi_Ataque_1: -5219866975997691510
+      Rubi_Ataque_10: -3188319858365665313
+      Rubi_Ataque_11: 2386961477769013500
+      Rubi_Ataque_12: -7870174761629665163
+      Rubi_Ataque_13: -4553899920007904145
+      Rubi_Ataque_14: -204153734031597212
+      Rubi_Ataque_2: 4061584464627587503
+      Rubi_Ataque_3: 3166763104051403294
+      Rubi_Ataque_4: -2428344398954894369
+      Rubi_Ataque_5: 7168112551844106872
+      Rubi_Ataque_6: -4486402285851349180
+      Rubi_Ataque_7: 2843402170098858387
+      Rubi_Ataque_8: -7928796561732385461
+      Rubi_Ataque_9: -3599437046240693069
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
