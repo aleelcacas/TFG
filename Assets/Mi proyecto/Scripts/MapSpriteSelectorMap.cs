@@ -9,6 +9,7 @@ public class MapSpriteSelectorMap : MonoBehaviour
     public bool up, down, left, right;
 
     public int type;
+    public Vector2 gridPos;
 
     public Color normalColor, enterColor;
 
@@ -22,6 +23,7 @@ public class MapSpriteSelectorMap : MonoBehaviour
         mainColor = normalColor;
         PickColor();
         PickSprite();
+        transform.localPosition = gridPos * new Vector2(220, 110) + new Vector2(540, 0);
     }
 
     void PickSprite(){

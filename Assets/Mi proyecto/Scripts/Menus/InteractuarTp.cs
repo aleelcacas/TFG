@@ -11,14 +11,12 @@ public class InteractuarTp : MonoBehaviour
     [SerializeField] private GameObject MapRoot;
     public GameObject poepo;
     public GameObject[] todos;
-    private string nombreBotones;
     public Vector3 posicionActualGrid, posicionBuscada;
     public bool mapaAbierto, salasEncontradas;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        nombreBotones = "Button(Clone)";
         posicionActualGrid = Vector3.zero;
         StartCoroutine(Iniciar());
     }
@@ -28,10 +26,10 @@ public class InteractuarTp : MonoBehaviour
     {
         if (!salasEncontradas)
             return;
-        posicionBuscada = posicionActualGrid * 16;
+        posicionBuscada = new Vector3(540, 0 ,0);
+        posicionBuscada += new Vector3(540 * posicionActualGrid.x, 110 * posicionActualGrid.y, 0);
 
-        SelectedOne();
-
+        
         if (InputManager.instance.InteractPressed)
         {
             if (mapaAbierto)
@@ -41,6 +39,7 @@ public class InteractuarTp : MonoBehaviour
             }
             else
             {
+                SelectedOne();
                 mapaInterfaz.SetActive(true);
                 mapaAbierto = true;
                 EventSystem.current.SetSelectedGameObject(poepo);
@@ -63,12 +62,16 @@ public class InteractuarTp : MonoBehaviour
     {
         foreach (GameObject obj in todos)
         {
-            if (obj.name == nombreBotones && obj.transform.position == posicionBuscada)
+            Debug.Log("Revisando: " + obj.name + " en " + obj.transform.localPosition);
+            if (obj.name.StartsWith("Button") && Vector3.Distance(obj.transform.localPosition, posicionBuscada) < 0.1f)
             {
-                poepo = obj; 
-                Debug.Log("Hola");
+                poepo = obj;
+                Debug.Log("Selecciono algo");
             }
         }
+        
+        if (poepo == null)
+        Debug.LogWarning("No se encontró ningún botón para la posición: " + posicionBuscada);
     }
 
     public void CambiarPosicionEnGrid(Vector3 offset)
