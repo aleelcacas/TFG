@@ -16,80 +16,124 @@ public class MapSpriteSelectorMap : MonoBehaviour
     Color mainColor;
 
     Image rend;
+    TeleportOnRoomEnded teleportOnRoomEnded;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rend = GetComponent<Image>();
+        teleportOnRoomEnded = GetComponent<TeleportOnRoomEnded>();
         mainColor = normalColor;
         PickColor();
         PickSprite();
+        SetPositionReference();
         transform.localPosition = gridPos * new Vector2(220, 110) + new Vector2(540, 0);
     }
 
-    void PickSprite(){
-        if (up){
-            if (down){
-                if (right){
-                    if (left){
+    void PickSprite()
+    {
+        if (up)
+        {
+            if (down)
+            {
+                if (right)
+                {
+                    if (left)
+                    {
                         rend.sprite = spUDLR;
                     }
-                    else{
+                    else
+                    {
                         rend.sprite = spDRU;
                     }
-                }else if (left){
+                }
+                else if (left)
+                {
                     rend.sprite = spULD;
                 }
-                else{
+                else
+                {
                     rend.sprite = spUD;
                 }
-            }else{
-                if (right){
+            }
+            else
+            {
+                if (right)
+                {
                     if (left)
                     {
                         rend.sprite = spRUL;
-                    }else{
+                    }
+                    else
+                    {
                         rend.sprite = spUR;
                     }
-                }else if (left){
+                }
+                else if (left)
+                {
                     rend.sprite = spUL;
-                }else{
+                }
+                else
+                {
                     rend.sprite = spU;
                 }
             }
-            return;   
+            return;
         }
-        if (down){
-            if (right){
-                if (left){
+        if (down)
+        {
+            if (right)
+            {
+                if (left)
+                {
                     rend.sprite = spLDR;
-                }else{
+                }
+                else
+                {
                     rend.sprite = spDR;
                 }
-            }else if (left){
+            }
+            else if (left)
+            {
                 rend.sprite = spDL;
-            }else{
+            }
+            else
+            {
                 rend.sprite = spD;
             }
             return;
         }
-        if (right){
+        if (right)
+        {
             if (left)
             {
                 rend.sprite = spRL;
-            }else{
+            }
+            else
+            {
                 rend.sprite = spR;
             }
-        }else{
+        }
+        else
+        {
             rend.sprite = spL;
         }
     }
 
-    void PickColor(){
-        if(type == 0) {
+    void PickColor()
+    {
+        if (type == 0)
+        {
             mainColor = normalColor;
-        }else if(type == 1){
+        }
+        else if (type == 1)
+        {
             mainColor = enterColor;
         }
         rend.color = mainColor;
+    }
+
+    void SetPositionReference()
+    {
+        teleportOnRoomEnded.SetPosicion(gridPos);
     }
 }

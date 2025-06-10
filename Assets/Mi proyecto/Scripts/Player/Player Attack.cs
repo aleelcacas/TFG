@@ -49,7 +49,8 @@ public class PlayerAttack : MonoBehaviour
         if (enemigo == null)
             return;
         vidaEnemigo = enemigo.gameObject.GetComponent<VidaEnemigo>();
-
+        if (vidaEnemigo == null)
+            return;
         vidaEnemigo.RecibirDaño(playerData.Ataque);
     }
 

@@ -132,7 +132,7 @@ public class PlayerData : ScriptableObject
                     extraVelocidad = 0.75f;
                 }
 
-                velocidad = PlayerPrefs.GetInt("Player_Velocidad");
+                velocidad = PlayerPrefs.GetFloat("Player_Velocidad");
             }
             return velocidad;
         }
@@ -150,7 +150,7 @@ public class PlayerData : ScriptableObject
         ataque = -1;
         vida = -1;
         oro = -1;
-        oroRecibido = 0;
+        oroRecibido = -1;
         extraVelocidad = 0.75f;
     }
 
@@ -160,7 +160,7 @@ public class PlayerData : ScriptableObject
         Ataque = 1;
         Vida = 100;
         Oro = 0;
-        oroRecibido = 0;
+        OroRecibido = 1;
         extraVelocidad = 0.75f;
     } 
 }

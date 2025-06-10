@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1896779334477251379}
   - component: {fileID: 300463051450821796}
   - component: {fileID: -8166639481898320265}
+  - component: {fileID: 715580902832131021}
   m_Layer: 5
   m_Name: Button
   m_TagString: Mapa
@@ -120,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1896779334477251379}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 715580902832131021}
+        m_TargetAssemblyTypeName: TeleportOnRoomEnded, Assembly-CSharp
+        m_MethodName: TeleporPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-8166639481898320265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +169,15 @@ MonoBehaviour:
   gridPos: {x: 0, y: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   enterColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &715580902832131021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7651811640806000809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038ef8bda48949e40aaa7dd60787db73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
