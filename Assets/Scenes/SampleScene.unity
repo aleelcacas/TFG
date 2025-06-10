@@ -149,7 +149,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sheetsNormal:
-  - {fileID: 7725100372751623747, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+  - {fileID: 978679400240019966, guid: c81aeb7d5f9c46642b092a4e29bed1c7, type: 3}
+  - {fileID: 1267560088250008839, guid: 61f2d06a6a682d349aaaf930b4e00ff1, type: 3}
+  - {fileID: 7027094370154516640, guid: 6fa2e437c4df3304f9b026b10543d985, type: 3}
+  - {fileID: 2745457220601086289, guid: be416e1048e5323408a41ad7d4071b05, type: 3}
+  - {fileID: 2418011014679931048, guid: 79af7574968fc1141bd7dc787af2eaac, type: 3}
+  - {fileID: 6224953337957799087, guid: 126bda808806a1744abad1cd20a58474, type: 3}
+  - {fileID: 4339547224366467355, guid: 8cbda33337da6be49aa3d9607c0f49e1, type: 3}
   RoomObj: {fileID: 4217513463879332449, guid: 60906495b523262429c2c6c73f6e9f91, type: 3}
   roomDimensions: {x: 56, y: 32}
   gutterSize: {x: 40, y: 20}
@@ -1169,6 +1175,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!1001 &1890982145
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7328911023756979047, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.14635563
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328911023756979047, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5604435
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328911023756979047, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328911023756979047, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328911023756979047, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328911023756979047, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328911023756979047, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328911023756979047, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328911023756979047, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328911023756979047, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725100372751623747, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_Name
+      value: SalaDePruebas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725100372751623747, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1181,3 +1248,4 @@ SceneRoots:
   - {fileID: 1056745453}
   - {fileID: 290285026}
   - {fileID: 1615818910}
+  - {fileID: 1890982145}

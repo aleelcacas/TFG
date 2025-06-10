@@ -55,4 +55,6 @@ MonoBehaviour:
   doorD: {fileID: 8252378843051302053, guid: 9c6176e70fb9bd045b3487b477e479ce, type: 3}
   doorL: {fileID: 4898970915509898387, guid: 74cfe80a686fa8344958f9238b3d37fe, type: 3}
   doorR: {fileID: 7454900214310828689, guid: aafb98f7349e8af4e81e30dedb2f6eb3, type: 3}
-  doorWall: {fileID: 1348133729177994, guid: 526cda0fd54858c44b466001f90b3db2, type: 3}
+  wallUp: {fileID: 6426793887278318038, guid: 5ea6477234ead5249a72b5d77c147c06, type: 3}
+  wallDown: {fileID: 3541705663759792370, guid: b25ccaae472a9b04d9063ad93541f3de, type: 3}
+  wallSides: {fileID: 7454900214310828689, guid: aafb98f7349e8af4e81e30dedb2f6eb3, type: 3}

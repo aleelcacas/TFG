@@ -6,7 +6,7 @@ public class RoomManager : MonoBehaviour
 {
     [SerializeField] GameObject[] enemigos;
     bool salaTermianda, doorTop, doorBot, doorLeft, doorRight;
-    GameObject doorUpOpen, doorBotOpen, doorRightOpen, doorLeftOpne;
+    public GameObject doorUpOpen, doorBotOpen, doorRightOpen, doorLeftOpen;
 
     void Start()
     {

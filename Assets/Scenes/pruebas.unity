@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 49513329}
   - component: {fileID: 49513328}
   - component: {fileID: 49513327}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: suelo (5)
   m_TagString: suelo
   m_Icon: {fileID: 0}
@@ -2682,7 +2682,7 @@ GameObject:
   - component: {fileID: 728277141}
   - component: {fileID: 728277140}
   - component: {fileID: 728277139}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: suelo (4)
   m_TagString: suelo
   m_Icon: {fileID: 0}

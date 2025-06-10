@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,9 +9,11 @@ public class VidaJugador : MonoBehaviour
     public float MaxHP;
     private float currentHP;
     public Slider vidaSlider;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         currentHP = MaxHP;
     }
 
@@ -21,6 +24,7 @@ public class VidaJugador : MonoBehaviour
 
     public void RecibirDaño(float damage)
     {
+        StartCoroutine(Destello());
         currentHP -= damage;
         
         currentHP = Mathf.Clamp(currentHP, 0, MaxHP);
@@ -33,6 +37,12 @@ public class VidaJugador : MonoBehaviour
         }
     }
 
+    IEnumerator Destello()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        spriteRenderer.color = Color.white;
+    }
     void ActualizarVidaUI()
     {
         if (vidaSlider == null)

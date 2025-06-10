@@ -23,9 +23,9 @@ public class RoomInstanceCopia : MonoBehaviour
         doorBot = _doorBot;
         doorLeft = _doorLeft;
         doorRight = _doorRight;
-        //Instantiate(prefab, transform.position, Quaternion.identity);
-        RoomManager roomManager = Instantiate(prefab, transform.position, Quaternion.identity).GetComponent<RoomManager>();
-        roomManager.Referencias(doorTop, doorBot, doorLeft, doorRight);
+        Instantiate(prefab, transform.position, Quaternion.identity);
+        //RoomManager roomManager = Instantiate(prefab, transform.position, Quaternion.identity).GetComponent<RoomManager>();
+        //roomManager.Referencias(doorTop, doorBot, doorLeft, doorRight);
         MakeDoors();
     }
     void MakeDoors()
