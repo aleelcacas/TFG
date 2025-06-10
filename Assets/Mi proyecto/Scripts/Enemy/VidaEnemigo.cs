@@ -56,7 +56,6 @@ public class VidaEnemigo : MonoBehaviour
     {
         OnEnemyDied?.Invoke(tipoEnemigo);
         Destroy(this.gameObject, 0.1f);
-        Debug.Log("Me muero");
     }
 
     void VidaMelee()

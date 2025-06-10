@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (InputManager.instance.JumpPressed && InputManager.instance.MoveInput.y == -1)
         {
-            Debug.Log("bajo");
             if (currentOneWayPlatform != null)
             {
                 StartCoroutine(DisableCollision());
@@ -55,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
         else if (suelado && InputManager.instance.JumpPressed)
         { 
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            Debug.Log("salto");
         }
 
         else if (InputManager.instance.DashPressed && vortereta)

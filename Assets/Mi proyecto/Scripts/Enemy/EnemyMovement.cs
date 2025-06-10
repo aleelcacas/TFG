@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     private bool playerDetected, floorDetected, miroDerecha, wallDetected;
     public LayerMask ground, playerLayer, wall;
     public Transform floorDetector, playerDetector, wallDetector;
-    public GameObject player;
+    private GameObject player;
     public int movDirection;
     public float velocidad;
     private Vector3 speed;
@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         meleeAttack = GetComponent<MeleeAttack>();
         playerDetected = false;

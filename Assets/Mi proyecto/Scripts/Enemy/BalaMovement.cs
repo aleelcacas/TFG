@@ -36,7 +36,6 @@ public class BalaMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("suelo"))
         {
-            Debug.Log("adios");
             Destroy(this.gameObject);
         }
 

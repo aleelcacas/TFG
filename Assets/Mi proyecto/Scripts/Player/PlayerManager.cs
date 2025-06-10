@@ -4,6 +4,7 @@ public class PlayerManager : MonoBehaviour
 {
     public PlayerData playerData;
     public TextMeshProUGUI oroText, nivelText, vidaText, ataquetext, velocidadText, oroRecibidoText;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -58,12 +59,10 @@ public class PlayerManager : MonoBehaviour
                 if (playerData.OroRecibido <= 1)
                 {
                     playerData.Oro += 10;
-                    Debug.Log("Recibo 10");
                 }
                 else
                 {
                     playerData.Oro += 10 + (playerData.OroRecibido * 3);
-                    Debug.Log("Recibo mas de 10 loco");
                 }
                 return;
             case 1:

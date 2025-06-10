@@ -21,7 +21,6 @@ public class VidaJugador : MonoBehaviour
 
     public void RecibirDaño(float damage)
     {
-        Debug.Log("au");
         currentHP -= damage;
         
         currentHP = Mathf.Clamp(currentHP, 0, MaxHP);
@@ -36,6 +35,8 @@ public class VidaJugador : MonoBehaviour
 
     void ActualizarVidaUI()
     {
+        if (vidaSlider == null)
+            return;
         vidaSlider.value = currentHP / MaxHP;
     }
 
