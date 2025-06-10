@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FlyEnemy : MonoBehaviour
@@ -12,7 +13,7 @@ public class FlyEnemy : MonoBehaviour
     public float dashCooldown = 3f;
     public float dashDuration = 0.3f;
 
-    public Transform player;
+    private GameObject player;
     private Animator animator;
     private SpriteRenderer sp;
     private Vector3 randomOffset;
@@ -24,6 +25,7 @@ public class FlyEnemy : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
         sp = GetComponent<SpriteRenderer>();
         PickNewOffset();
@@ -35,7 +37,7 @@ public class FlyEnemy : MonoBehaviour
     {
         animator.SetBool("Moving", moving);
 
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
         if (distanceToPlayer < detectionRadius)
         {
@@ -65,7 +67,7 @@ public class FlyEnemy : MonoBehaviour
                     PickNewOffset();
                 }
 
-                Vector3 targetPos = player.position + randomOffset;
+                Vector3 targetPos = player.transform.position + randomOffset;
                 Vector3 moveDir = (targetPos - transform.position).normalized;
                 transform.position += followSpeed * Time.deltaTime * moveDir;
                 dashCooldownTimer -= Time.deltaTime;
@@ -76,8 +78,6 @@ public class FlyEnemy : MonoBehaviour
                 }
             }
         }
-
-        
     }
 
     IEnumerator CancelarMovimiento()
@@ -94,7 +94,7 @@ public class FlyEnemy : MonoBehaviour
 
     void StartDash()
     {
-        dashDirection = (player.position - transform.position).normalized;
+        dashDirection = (player.transform.position - transform.position).normalized;
         isDashing = true;
         dashTimeLeft = dashDuration;
         dashCooldownTimer = dashCooldown;
@@ -113,7 +113,6 @@ public class FlyEnemy : MonoBehaviour
     {
         if (collision.CompareTag("Player") && isDashing)
         {
-            
             vidaJugador = collision.gameObject.GetComponent<VidaJugador>();
 
             if (vidaJugador != null)

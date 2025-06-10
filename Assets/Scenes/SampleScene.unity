@@ -149,12 +149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sheetsNormal:
-  - {fileID: 761915005706830494, guid: 1a1971e5a5acb1441b189403554c22c3, type: 3}
-  - {fileID: 9105622199591985001, guid: 137ad683c46458a4992009705a0dab81, type: 3}
-  - {fileID: 6638923766397209418, guid: 4e53441d840a87342a967551a3a0ab2d, type: 3}
+  - {fileID: 7725100372751623747, guid: 20bf4fb81b8c8074993acba4aeddd0c1, type: 3}
   RoomObj: {fileID: 4217513463879332449, guid: 60906495b523262429c2c6c73f6e9f91, type: 3}
-  roomDimensions: {x: 272, y: 144}
-  gutterSize: {x: 144, y: 64}
+  roomDimensions: {x: 56, y: 32}
+  gutterSize: {x: 40, y: 20}
 --- !u!114 &163705955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,11 +976,11 @@ PrefabInstance:
       objectReference: {fileID: 1644587178}
     - target: {fileID: 2101496597374703340, guid: 4ff74ec193a7140419337d05ff4be2e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.64925
+      value: -10.24
       objectReference: {fileID: 0}
     - target: {fileID: 2101496597374703340, guid: 4ff74ec193a7140419337d05ff4be2e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.8854065
+      value: -10.29
       objectReference: {fileID: 0}
     - target: {fileID: 2101496597374703340, guid: 4ff74ec193a7140419337d05ff4be2e9, type: 3}
       propertyPath: m_LocalPosition.z

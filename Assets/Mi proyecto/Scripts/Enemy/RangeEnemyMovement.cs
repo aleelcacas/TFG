@@ -48,7 +48,7 @@ public class RangeEnemyMovement : MonoBehaviour
 
         floorDetected = Physics2D.OverlapBox(floorDetector.position, new Vector3(1.3f, 0.18f, 0), 0f, ground);
 
-        wallDetected = Physics2D.OverlapBox(wallDetector.position, new Vector3(1, 1, 0), 0f, wall);
+        wallDetected = Physics2D.OverlapBox(wallDetector.position, new Vector3(1, 1, 0), 0f, ground);
 
         if (!floorDetected && !playerDetected)
         {

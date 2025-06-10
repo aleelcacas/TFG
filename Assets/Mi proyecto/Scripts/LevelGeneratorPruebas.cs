@@ -222,13 +222,5 @@ public class LevelGeneratoPruebas : MonoBehaviour
             mapper.gameObject.transform.parent = mapRoot;
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        if (numberOfRooms == numerodesalas)
-        {
-            //roomWhiteObj.SetActive(false);
-        }
-    }
 }
 

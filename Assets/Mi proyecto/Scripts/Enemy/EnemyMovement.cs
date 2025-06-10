@@ -47,7 +47,7 @@ public class EnemyMovement : MonoBehaviour
 
         playerDetected = Physics2D.OverlapBox(playerDetector.position, tamano, 0f, playerLayer);
 
-        wallDetected = Physics2D.OverlapBox(wallDetector.position, new Vector3(1, 1, 0), 0f, wall);
+        wallDetected = Physics2D.OverlapBox(wallDetector.position, new Vector3(1, 1, 0), 0f, ground);
 
         if (!floorDetected && !playerDetected)
         {

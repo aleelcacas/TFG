@@ -27,7 +27,7 @@ public class InteractuarTp : MonoBehaviour
         if (!salasEncontradas)
             return;
         posicionBuscada = new Vector3(540, 0 ,0);
-        posicionBuscada += new Vector3(540 * posicionActualGrid.x, 110 * posicionActualGrid.y, 0);
+        posicionBuscada += new Vector3(220 * posicionActualGrid.x, 110 * posicionActualGrid.y, 0);
 
         
         if (InputManager.instance.InteractPressed)
@@ -66,7 +66,6 @@ public class InteractuarTp : MonoBehaviour
             if (obj.name.StartsWith("Button") && Vector3.Distance(obj.transform.localPosition, posicionBuscada) < 0.1f)
             {
                 seleccion = obj;
-                Debug.Log("Selecciono algo");
             }
         }
         
