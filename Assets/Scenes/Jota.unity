@@ -118,11 +118,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &429502764 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3031127107637346303, guid: 83271154cb56773438a7cb6aefb29932, type: 3}
-  m_PrefabInstance: {fileID: 108369254194952940}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &545812050
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +149,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 429502764}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &545812052
 TilemapRenderer:
@@ -3794,10 +3789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3031127107637346303, guid: 83271154cb56773438a7cb6aefb29932, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 545812051}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83271154cb56773438a7cb6aefb29932, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -3807,3 +3799,4 @@ SceneRoots:
   - {fileID: 1430842591}
   - {fileID: 108369254194952940}
   - {fileID: 900084597}
+  - {fileID: 545812051}
