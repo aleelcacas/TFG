@@ -115,27 +115,27 @@ public class MejorasMenuManager : MonoBehaviour
     {
         switch (playerData.OroRecibido)
         {
-            case 0:
+            case 1:
                 costeMejoraOro = 50;
                 textoCosteOro.text = costeMejoraOro.ToString();
                 textoOro.text = "Oro Recibido Nv. 1";
                 return;
-            case 1:
+            case 2:
                 costeMejoraOro = 100;
                 textoCosteOro.text = costeMejoraOro.ToString();
                 textoOro.text = "Oro Recibido Nv. 2";
                 return;
-            case 2:
+            case 3:
                 costeMejoraOro = 150;
                 textoCosteOro.text = costeMejoraOro.ToString();
                 textoOro.text = "Oro Recibido Nv. 3";
                 return;
-            case 3:
+            case 4:
                 costeMejoraOro = 250;
                 textoCosteOro.text = costeMejoraOro.ToString();
                 textoOro.text = "Oro Recibido Nv. 4";
                 return;
-            case 4:
+            case 5:
                 textoCosteOro.text = "Nv. Máximo";
                 textoOro.text = "Oro Recibido Nv. 5";
                 return;

@@ -6,7 +6,7 @@ public class RangeEnemyMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator animator;
-    public GameObject player;
+    private GameObject player;
     public Transform floorDetector, playerDetector, wallDetector;
     public Vector3 rango;
     private Vector3 speed;
@@ -21,6 +21,7 @@ public class RangeEnemyMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         miroDerecha = true;

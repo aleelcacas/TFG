@@ -9,7 +9,7 @@ public class InteractuarTp : MonoBehaviour
 {
     [SerializeField] private GameObject mapaInterfaz;
     [SerializeField] private GameObject MapRoot;
-    public GameObject poepo;
+    public GameObject seleccion;
     public GameObject[] todos;
     public Vector3 posicionActualGrid, posicionBuscada;
     public bool mapaAbierto, salasEncontradas;
@@ -42,7 +42,7 @@ public class InteractuarTp : MonoBehaviour
                 SelectedOne();
                 mapaInterfaz.SetActive(true);
                 mapaAbierto = true;
-                EventSystem.current.SetSelectedGameObject(poepo);
+                EventSystem.current.SetSelectedGameObject(seleccion);
             }
         }
     }
@@ -62,16 +62,16 @@ public class InteractuarTp : MonoBehaviour
     {
         foreach (GameObject obj in todos)
         {
-            Debug.Log("Revisando: " + obj.name + " en " + obj.transform.localPosition);
+            Debug.Log("Soy: " + obj.name + " estoy en " + obj.transform.localPosition);
             if (obj.name.StartsWith("Button") && Vector3.Distance(obj.transform.localPosition, posicionBuscada) < 0.1f)
             {
-                poepo = obj;
+                seleccion = obj;
                 Debug.Log("Selecciono algo");
             }
         }
         
-        if (poepo == null)
-        Debug.LogWarning("No se encontró ningún botón para la posición: " + posicionBuscada);
+        if (seleccion == null)
+        Debug.LogWarning("No encuentro na en: " + posicionBuscada);
     }
 
     public void CambiarPosicionEnGrid(Vector3 offset)
