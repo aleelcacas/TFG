@@ -15,6 +15,7 @@ TagManager:
   - EnemigoRango
   - EnemigoVolador
   - Mapa
+  - RoomRoot
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ public class InteractuarTp : MonoBehaviour
     [SerializeField] private GameObject MapRoot;
     public GameObject seleccion;
     public GameObject[] todos;
+    private MovementBetweenRooms mv;
     public Vector3 posicionActualGrid, posicionBuscada;
     public bool mapaAbierto, salasEncontradas;
     
@@ -18,6 +19,7 @@ public class InteractuarTp : MonoBehaviour
     void Start()
     {
         posicionActualGrid = Vector3.zero;
+        mv = GetComponent<MovementBetweenRooms>();
         StartCoroutine(Iniciar());
     }
 
@@ -28,6 +30,7 @@ public class InteractuarTp : MonoBehaviour
             return;
         posicionBuscada = new Vector3(540, 0 ,0);
         posicionBuscada += new Vector3(220 * posicionActualGrid.x, 110 * posicionActualGrid.y, 0);
+        mv.gridPos = posicionActualGrid;
 
         
         if (InputManager.instance.InteractPressed)

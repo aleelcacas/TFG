@@ -1745,6 +1745,10 @@ MonoBehaviour:
   enemigos:
   - {fileID: 3867626160298961543}
   - {fileID: 4398377142988347497}
+  doorUpOpen: {fileID: 8846638866147796491, guid: afa8a259346799d40b218bb0207b906a, type: 3}
+  doorBotOpen: {fileID: 2813804141922710351, guid: 89990b17b0cec80459bfbefda99c1e25, type: 3}
+  doorRightOpen: {fileID: 4898544603041683249, guid: fbd3bc208f4619c46a5a0760f7c399ba, type: 3}
+  doorLeftOpen: {fileID: 8865513365550592296, guid: 19b148c7d5e0740439c7187079d3e0a0, type: 3}
 --- !u!1001 &8590867261959893828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1755,11 +1759,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 752972229130796491, guid: 86d7443114a95864ebf9ff5751350492, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.184164
+      value: -16.61
       objectReference: {fileID: 0}
     - target: {fileID: 752972229130796491, guid: 86d7443114a95864ebf9ff5751350492, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.89
+      value: -1.89
       objectReference: {fileID: 0}
     - target: {fileID: 752972229130796491, guid: 86d7443114a95864ebf9ff5751350492, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1822,11 +1826,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 752972229130796491, guid: 86d7443114a95864ebf9ff5751350492, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.96994
+      value: 18.9
       objectReference: {fileID: 0}
     - target: {fileID: 752972229130796491, guid: 86d7443114a95864ebf9ff5751350492, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.92
+      value: -1.94
       objectReference: {fileID: 0}
     - target: {fileID: 752972229130796491, guid: 86d7443114a95864ebf9ff5751350492, type: 3}
       propertyPath: m_LocalPosition.z

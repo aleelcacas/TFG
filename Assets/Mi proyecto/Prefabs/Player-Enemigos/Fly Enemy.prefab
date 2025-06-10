@@ -146,7 +146,6 @@ MonoBehaviour:
   dashSpeed: 20
   dashCooldown: 3
   dashDuration: 1
-  player: {fileID: 0}
 --- !u!95 &5011744469430566695
 Animator:
   serializedVersion: 7

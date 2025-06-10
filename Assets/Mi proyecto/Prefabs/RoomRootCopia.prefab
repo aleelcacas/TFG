@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2321733278370913603}
   m_Layer: 0
   m_Name: RoomRootCopia
-  m_TagString: Untagged
+  m_TagString: RoomRoot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,4 +57,4 @@ MonoBehaviour:
   doorR: {fileID: 7454900214310828689, guid: aafb98f7349e8af4e81e30dedb2f6eb3, type: 3}
   wallUp: {fileID: 6426793887278318038, guid: 5ea6477234ead5249a72b5d77c147c06, type: 3}
   wallDown: {fileID: 3541705663759792370, guid: b25ccaae472a9b04d9063ad93541f3de, type: 3}
-  wallSides: {fileID: 7454900214310828689, guid: aafb98f7349e8af4e81e30dedb2f6eb3, type: 3}
+  wallSides: {fileID: 7454900214310828689, guid: 5346c70cfc8ccae4ab6d463c6303e174, type: 3}
