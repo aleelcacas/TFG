@@ -7,6 +7,10 @@ public class ManagerEscenas : MonoBehaviour
     {
         SceneManager.LoadScene("pruebas");
     }
+    public void EscenaSample()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
     public void EscenaExplicacion()
     {
         SceneManager.LoadScene("Explicacion");

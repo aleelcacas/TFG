@@ -1,10 +1,12 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] enemigos;
+    [SerializeField] List<GameObject> enemigos = new List<GameObject>();
     GameObject[] salas;
     public GameObject sala;
     Vector3 gridPos;
@@ -29,19 +31,13 @@ public class RoomManager : MonoBehaviour
     {
         if (salaTermianda)
             return;
-        if (enemigos.Length == 0)
+
+        enemigos.RemoveAll(e => e == null);
+
+        if (enemigos.Count == 0)
         {
             TerminarSala();
             salaTermianda = true;
-        }
-
-        foreach (GameObject enemigo in enemigos)
-        {
-            if (enemigo == null)
-            {
-                ArrayUtility.Remove(ref enemigos, enemigo);
-                break;
-            }
         }
     }
 

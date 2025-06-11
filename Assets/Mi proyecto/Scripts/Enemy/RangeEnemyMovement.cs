@@ -10,9 +10,9 @@ public class RangeEnemyMovement : MonoBehaviour
     public Transform floorDetector, playerDetector, wallDetector;
     public Vector3 rango;
     private Vector3 speed;
-    public LayerMask playerLayer, ground, wall;
+    public LayerMask playerLayer, ground, enemigos;
     private float movDirection;
-    bool playerDetected, miroDerecha, floorDetected, wallDetected;
+    bool playerDetected, miroDerecha, floorDetected, wallDetected, enemyDetected;
     public float tiempoEntreAtaques = 1f;
     private float tiempoUltimoAtaque = -Mathf.Infinity;
     private bool atacando;
@@ -48,14 +48,16 @@ public class RangeEnemyMovement : MonoBehaviour
 
         floorDetected = Physics2D.OverlapBox(floorDetector.position, new Vector3(1.3f, 0.18f, 0), 0f, ground);
 
-        wallDetected = Physics2D.OverlapBox(wallDetector.position, new Vector3(1, 1, 0), 0f, ground);
+        wallDetected = Physics2D.OverlapBox(wallDetector.position, new Vector3(1, 3, 0), 0f, ground);
+
+        enemyDetected = Physics2D.OverlapBox(wallDetector.position, new Vector3(1, 3, 0), 0f, enemigos);
 
         if (!floorDetected && !playerDetected)
         {
             CambiarMovimiento();
         }
 
-        if (wallDetected)
+        if (wallDetected || enemyDetected)
         {
             CambiarMovimiento();
         }
@@ -162,6 +164,6 @@ public class RangeEnemyMovement : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(playerDetector.position, rango);
         Gizmos.DrawWireCube(floorDetector.position, new Vector3(1.3f, 0.18f, 0));
-        Gizmos.DrawWireCube(wallDetector.position, new Vector3(1f, 1f, 0));
+        Gizmos.DrawWireCube(wallDetector.position, new Vector3(1f, 3f, 0));
     }  
 }

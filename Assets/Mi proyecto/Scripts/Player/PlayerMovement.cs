@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAttack playerAttack;
     private Rigidbody2D rb;
     private Animator animator;
-    private GameObject currentOneWayPlatform;
+    public GameObject currentOneWayPlatform;
     public CapsuleCollider2D playerColldier;
     private float movSpeed = 600, movSmooth = 0.15f, movX, jumpForce = 250;
     private Vector3 speed;
@@ -163,10 +163,19 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator DisableCollision()
     {
-        BoxCollider2D platformCollider = currentOneWayPlatform.GetComponent<BoxCollider2D>();
+        BoxCollider2D[] platformCollider = currentOneWayPlatform.GetComponents<BoxCollider2D>();
 
-        Physics2D.IgnoreCollision(playerColldier, platformCollider);
+        foreach (BoxCollider2D hit in platformCollider)
+        {
+            Physics2D.IgnoreCollision(playerColldier, hit);
+        }
+        
         yield return new WaitForSeconds(0.4f);
-        Physics2D.IgnoreCollision(playerColldier, platformCollider, false);
+
+        foreach (BoxCollider2D hit in platformCollider)
+        {
+            Physics2D.IgnoreCollision(playerColldier, hit, false);
+        }
+        
     }
 }

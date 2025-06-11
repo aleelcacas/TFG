@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 436427134482503095}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 1.0340006, z: 0}
+  m_LocalPosition: {x: 1.41, y: 1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -267,9 +267,9 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 128
-  wall:
+  enemigos:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   tiempoEntreAtaques: 2
   bala: {fileID: 9164529693244598764, guid: 38fee814cfdc6334f8181b11ddb01ccc, type: 3}
   puntoDisparo: {fileID: 8930821490066382471}

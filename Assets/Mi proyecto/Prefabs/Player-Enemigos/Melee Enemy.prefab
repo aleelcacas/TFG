@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2393222448763410240}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.81, y: 1.24, z: 0}
+  m_LocalPosition: {x: 1.81, y: 1.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -272,9 +272,9 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
-  wall:
+  enemigos:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   floorDetector: {fileID: 7883754216731022091}
   playerDetector: {fileID: 5017996215437729277}
   wallDetector: {fileID: 1084529861977241864}

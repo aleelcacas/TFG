@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 57d2ee1c6e8eb8044b8c4671934d8158, type: 2}
+  currentOneWayPlatform: {fileID: 0}
   playerColldier: {fileID: 6402624939883632932}
   detectorSize: {x: 1.3, y: 0.18, z: 0}
   floorDetector: {fileID: 1609861720444512191}
@@ -250,10 +251,13 @@ MonoBehaviour:
     m_Bits: 8
   enemy:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 3072
   nada:
     serializedVersion: 2
     m_Bits: 0
+  bala:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!114 &4485876077555166547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,3 +349,4 @@ MonoBehaviour:
   camara: {fileID: 0}
   interactuarTp: {fileID: 2984456882211416096}
   animator: {fileID: 0}
+  gridPos: {x: 0, y: 0, z: 0}

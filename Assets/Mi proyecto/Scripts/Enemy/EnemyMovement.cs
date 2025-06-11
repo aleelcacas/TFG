@@ -4,8 +4,8 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     private MeleeAttack meleeAttack;
-    private bool playerDetected, floorDetected, miroDerecha, wallDetected;
-    public LayerMask ground, playerLayer, wall;
+    private bool playerDetected, floorDetected, miroDerecha, wallDetected, enemyDetected;
+    public LayerMask ground, playerLayer, enemigos;
     public Transform floorDetector, playerDetector, wallDetector;
     private GameObject player;
     public int movDirection;
@@ -47,14 +47,16 @@ public class EnemyMovement : MonoBehaviour
 
         playerDetected = Physics2D.OverlapBox(playerDetector.position, tamano, 0f, playerLayer);
 
-        wallDetected = Physics2D.OverlapBox(wallDetector.position, new Vector3(1, 1, 0), 0f, ground);
+        wallDetected = Physics2D.OverlapBox(wallDetector.position, new Vector3(1, 3, 0), 0f, ground);
+
+        enemyDetected = Physics2D.OverlapBox(wallDetector.position, new Vector3(1, 3, 0), 0f, enemigos);
 
         if (!floorDetected && !playerDetected)
         {
             CambiarMovimiento();
         }
 
-        if (wallDetected)
+        if (wallDetected || enemyDetected)
         {
             CambiarMovimiento();
         }
@@ -130,6 +132,6 @@ public class EnemyMovement : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(floorDetector.position, new Vector3(1.3f, 0.18f, 0));
         Gizmos.DrawWireCube(playerDetector.position, tamano);
-        Gizmos.DrawWireCube(wallDetector.position, new Vector3(1f, 1f, 0));
+        Gizmos.DrawWireCube(wallDetector.position, new Vector3(1f, 3f, 0));
     }
 }
