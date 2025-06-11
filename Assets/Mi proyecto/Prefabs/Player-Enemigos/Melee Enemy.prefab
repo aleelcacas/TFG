@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1084529861977241864}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 162956498503930322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PuntoGolpe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5017996215437729277}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,8 +176,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 333301599
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1726101101, guid: 7911360a6a70d8e4ba3f0419b082360f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.87058824}
@@ -271,7 +271,7 @@ MonoBehaviour:
     m_Bits: 128
   playerLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 4096
   enemigos:
     serializedVersion: 2
     m_Bits: 1024
@@ -349,7 +349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7883754216731022091}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FloorDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}

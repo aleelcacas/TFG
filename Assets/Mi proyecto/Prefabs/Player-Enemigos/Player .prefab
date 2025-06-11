@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 4588543583776807175}
   - component: {fileID: 2984456882211416096}
   - component: {fileID: 473713217616180317}
-  m_Layer: 3
+  m_Layer: 12
   m_Name: 'Player '
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -145,8 +145,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1160821071
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -5355658745289702147, guid: d0e4ef3428d1da14ca3ec8b772930655, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -248,16 +248,13 @@ MonoBehaviour:
     m_Bits: 128
   player:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 4096
   enemy:
     serializedVersion: 2
     m_Bits: 3072
   nada:
     serializedVersion: 2
     m_Bits: 0
-  bala:
-    serializedVersion: 2
-    m_Bits: 2048
 --- !u!114 &4485876077555166547
 MonoBehaviour:
   m_ObjectHideFlags: 0

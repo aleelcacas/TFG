@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2831380093095287273}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383373169288133466}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FloorDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,8 +145,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 333301599
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1962788489612303290, guid: ff785ccb3aaa8524e87d3b3f04b3e58c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -263,7 +263,7 @@ MonoBehaviour:
   rango: {x: 29.6, y: 9.76, z: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 4096
   ground:
     serializedVersion: 2
     m_Bits: 128
@@ -309,7 +309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8930821490066382471}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Punto Disparo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8329369764613047265}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}

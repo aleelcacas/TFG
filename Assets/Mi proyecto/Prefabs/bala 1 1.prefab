@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6881471830953164180}
   - component: {fileID: 2168630047292962472}
   - component: {fileID: 7083140190991098617}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: bala 1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1160821071
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 6165555400090685290, guid: fe9bb3eafcafadc489c8636127c379cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

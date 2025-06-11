@@ -16,11 +16,12 @@ TagManager:
   - EnemigoVolador
   - Mapa
   - RoomRoot
+  - ObjetoTp
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - Water
   - Water
   - UI
   - Plataforma
@@ -29,7 +30,7 @@ TagManager:
   - Wall
   - Enemigos
   - Bala
-  - 
+  - Player
   - 
   - 
   - 
@@ -52,6 +53,21 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Fondo
+    uniqueID: 3051385169
+    locked: 0
+  - name: Solido
+    uniqueID: 4147537425
+    locked: 0
+  - name: Enemigos
+    uniqueID: 333301599
+    locked: 0
+  - name: Player
+    uniqueID: 1160821071
+    locked: 0
+  - name: Detalles
+    uniqueID: 1116236449
     locked: 0
   m_RenderingLayers:
   - Default

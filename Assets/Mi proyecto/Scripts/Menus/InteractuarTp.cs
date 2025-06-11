@@ -14,10 +14,12 @@ public class InteractuarTp : MonoBehaviour
     private MovementBetweenRooms mv;
     public Vector3 posicionActualGrid, posicionBuscada;
     public bool mapaAbierto, salasEncontradas;
+    private bool canOpenTp;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Time.timeScale = 1;
         posicionActualGrid = Vector3.zero;
         mv = GetComponent<MovementBetweenRooms>();
         StartCoroutine(Iniciar());
@@ -33,15 +35,17 @@ public class InteractuarTp : MonoBehaviour
         mv.gridPos = posicionActualGrid;
 
         
-        if (InputManager.instance.InteractPressed)
+        if (InputManager.instance.InteractPressed && canOpenTp)
         {
             if (mapaAbierto)
             {
+                Time.timeScale = 1;
                 mapaInterfaz.SetActive(false);
                 mapaAbierto = false;
             }
             else
             {
+                Time.timeScale = 0;
                 SelectedOne();
                 mapaInterfaz.SetActive(true);
                 mapaAbierto = true;
@@ -74,6 +78,22 @@ public class InteractuarTp : MonoBehaviour
         
         if (seleccion == null)
         Debug.LogWarning("No encuentro na en: " + posicionBuscada);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ObjetoTp"))
+        {
+            canOpenTp = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ObjetoTp"))
+        {
+            canOpenTp = false;
+        }
     }
 
     public void CambiarPosicionEnGrid(Vector3 offset)
