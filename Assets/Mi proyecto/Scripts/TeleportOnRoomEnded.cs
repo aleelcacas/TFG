@@ -23,8 +23,9 @@ public class TeleportOnRoomEnded : MonoBehaviour
 
     public void TeleporPlayer()
     {
+        interactuarTp.CloseTeleporUI();
         posicionTp = new Vector3(posicionEnGrid.x * 96, posicionEnGrid.y * 52);
-        player.transform.position = posicionTp;
+        player.transform.position = new Vector2(posicionTp.x -23, posicionTp.y -14);
         camara.transform.position = posicionTp;
         interactuarTp.posicionActualGrid = posicionEnGrid;
     }

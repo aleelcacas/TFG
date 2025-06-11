@@ -9,9 +9,10 @@ public class RoomManager : MonoBehaviour
     [SerializeField] List<GameObject> enemigos = new List<GameObject>();
     GameObject[] salas;
     public GameObject sala;
+    GameObject player;
     Vector3 gridPos;
     public bool salaTermianda, doorTop, doorBot, doorLeft, doorRight;
-    public GameObject doorUpOpen, doorBotOpen, doorRightOpen, doorLeftOpen;
+    public GameObject doorUpOpen, doorBotOpen, doorRightOpen, doorLeftOpen, tpObject;
 
     void Start()
     {
@@ -36,7 +37,9 @@ public class RoomManager : MonoBehaviour
 
         if (enemigos.Count == 0)
         {
+            tpObject.SetActive(true);
             TerminarSala();
+            CambioSpriteMapa();
             salaTermianda = true;
         }
     }
@@ -87,5 +90,14 @@ public class RoomManager : MonoBehaviour
             Destroy(puertaDerecha.gameObject);
             doorRight = false;
         }
+    }
+
+    void CambioSpriteMapa()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        InteractuarTp interactuarTp = player.GetComponent<InteractuarTp>();
+
+        interactuarTp.ActivarTp();
     }
 }

@@ -9,19 +9,21 @@ public class InteractuarTp : MonoBehaviour
 {
     [SerializeField] private GameObject mapaInterfaz;
     [SerializeField] private GameObject MapRoot;
+    private PlayerMovement playerMovement;
     public GameObject seleccion;
     public GameObject[] todos;
     private MovementBetweenRooms mv;
     public Vector3 posicionActualGrid, posicionBuscada;
     public bool mapaAbierto, salasEncontradas;
     private bool canOpenTp;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Time.timeScale = 1;
         posicionActualGrid = Vector3.zero;
         mv = GetComponent<MovementBetweenRooms>();
+        playerMovement = GetComponent<PlayerMovement>();
         StartCoroutine(Iniciar());
     }
 
@@ -30,23 +32,26 @@ public class InteractuarTp : MonoBehaviour
     {
         if (!salasEncontradas)
             return;
-        posicionBuscada = new Vector3(540, 0 ,0);
+
+        SelectedOne();
+        posicionBuscada = new Vector3(540, 0, 0);
         posicionBuscada += new Vector3(220 * posicionActualGrid.x, 110 * posicionActualGrid.y, 0);
         mv.gridPos = posicionActualGrid;
 
-        
+
         if (InputManager.instance.InteractPressed && canOpenTp)
         {
             if (mapaAbierto)
             {
+                playerMovement.enabled = true;
                 Time.timeScale = 1;
                 mapaInterfaz.SetActive(false);
                 mapaAbierto = false;
             }
             else
             {
+                playerMovement.enabled = false;
                 Time.timeScale = 0;
-                SelectedOne();
                 mapaInterfaz.SetActive(true);
                 mapaAbierto = true;
                 EventSystem.current.SetSelectedGameObject(seleccion);
@@ -69,15 +74,14 @@ public class InteractuarTp : MonoBehaviour
     {
         foreach (GameObject obj in todos)
         {
-            Debug.Log("Soy: " + obj.name + " estoy en " + obj.transform.localPosition);
             if (obj.name.StartsWith("Button") && Vector3.Distance(obj.transform.localPosition, posicionBuscada) < 0.1f)
             {
                 seleccion = obj;
             }
         }
-        
+
         if (seleccion == null)
-        Debug.LogWarning("No encuentro na en: " + posicionBuscada);
+            Debug.LogWarning("No encuentro na en: " + posicionBuscada);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -99,5 +103,22 @@ public class InteractuarTp : MonoBehaviour
     public void CambiarPosicionEnGrid(Vector3 offset)
     {
         posicionActualGrid += offset;
+    }
+
+    public void CloseTeleporUI()
+    {
+        playerMovement.enabled = true;
+        Time.timeScale = 1;
+        mapaInterfaz.SetActive(false);
+        mapaAbierto = false;
+    }
+
+    public void ActivarTp()
+    {
+        Button buton = seleccion.GetComponent<Button>();
+        buton.interactable = true;
+        ColorBlock cb = buton.colors;
+        cb.normalColor = Color.green;
+        buton.colors = cb;
     }
 }

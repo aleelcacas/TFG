@@ -336,7 +336,7 @@ MonoBehaviour:
   atacando: 0
   playerLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 4096
   puntoGolpe: {fileID: 162956498503930322}
   "tama\xF1oGolpe": {x: 1.5, y: 1}
   damage: 28
