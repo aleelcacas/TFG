@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class MejorasMenuManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI textoAtaque, textoVida, textoVelocidad, textoOro, oroActual;
-    [SerializeField] private TextMeshProUGUI textoCosteAtaque, textoCosteVida, textoCosteVelocidad, textoCosteOro;
-    private int costeMejoraAtaque, costeMejoraVida, costeMejoraOro, costeMejoraVelocidad;
+    [SerializeField] private TextMeshProUGUI textoAtaque, textoVida, textoVelocidad, textoOro, oroActual, textoMapSize, textoLifeSteal;
+    [SerializeField] private TextMeshProUGUI textoCosteAtaque, textoCosteVida, textoCosteVelocidad, textoCosteOro, textoCosteMapa, textoCosteLifeSteal;
+    private int costeMejoraAtaque, costeMejoraVida, costeMejoraOro, costeMejoraVelocidad, costeMejoraMapa, costeMejoraLifeSteal;
 
     public PlayerData playerData;
 
@@ -17,6 +17,7 @@ public class MejorasMenuManager : MonoBehaviour
             return;
         playerData.Ataque += 1;
         playerData.Oro -= costeMejoraAtaque;
+        playerData.Nivel += 1;
     }
 
     public void LevelUpVida()
@@ -27,6 +28,7 @@ public class MejorasMenuManager : MonoBehaviour
             return;
         playerData.Vida += 25;
         playerData.Oro -= costeMejoraVida;
+        playerData.Nivel += 1;
     }
 
     public void LevelUpVelocidad()
@@ -37,6 +39,7 @@ public class MejorasMenuManager : MonoBehaviour
             return;
         playerData.extraVelocidad += 0.25f;
         playerData.Oro -= costeMejoraVelocidad;
+        playerData.Nivel += 1;
     }
 
     public void LevelUpOro()
@@ -47,6 +50,29 @@ public class MejorasMenuManager : MonoBehaviour
             return;
         playerData.OroRecibido += 1;
         playerData.Oro -= costeMejoraOro;
+        playerData.Nivel += 1;
+    }
+
+    public void LevelUpMapSize()
+    {
+        if (playerData.Oro < costeMejoraMapa)
+            return;
+        if (playerData.MapSize == 3)
+            return;
+        playerData.MapSize += 1;
+        playerData.Oro -= costeMejoraMapa;
+        playerData.Nivel += 1;
+    }
+
+    public void LevelUpLifeSteal()
+    {
+        if (playerData.Oro < costeMejoraLifeSteal)
+            return;
+        if (playerData.LifeSteal == 3)
+            return;
+        playerData.LifeSteal += 1;
+        playerData.Oro -= costeMejoraLifeSteal;
+        playerData.Nivel += 1;
     }
 
     void Update()
@@ -57,6 +83,8 @@ public class MejorasMenuManager : MonoBehaviour
         Vida();
         Oro();
         Velocidad();
+        MapSize();
+        LifeSteal();
     }
 
     void Ataque()
@@ -164,6 +192,48 @@ public class MejorasMenuManager : MonoBehaviour
             case 1.5f:
                 textoCosteVelocidad.text = "Nv. Máximo";
                 textoVelocidad.text = "Velocidad Nv. 4";
+                return;
+        }
+    }
+
+    void MapSize()
+    {
+        switch (playerData.MapSize)
+        {
+            case 1:
+                costeMejoraMapa = 50;
+                textoCosteMapa.text = costeMejoraMapa.ToString();
+                textoMapSize.text = "MapSize Nv. 1";
+                return;
+            case 2:
+                textoCosteMapa.text = costeMejoraMapa.ToString();
+                textoMapSize.text = "MapSize Nv. 2";
+                costeMejoraMapa = 150;
+                return;
+            case 3:
+                textoCosteMapa.text = costeMejoraMapa.ToString();
+                textoMapSize.text = "MapSize Nv. Máximo";
+                return;
+        }
+    }
+
+    void LifeSteal()
+    {
+        switch (playerData.LifeSteal)
+        {
+            case 1:
+                costeMejoraLifeSteal = 150;
+                textoCosteLifeSteal.text = costeMejoraLifeSteal.ToString();
+                textoLifeSteal.text = "LifeSteal Nv. 0";
+                return;
+            case 2:
+                costeMejoraLifeSteal = 300;
+                textoCosteLifeSteal.text = costeMejoraLifeSteal.ToString();
+                textoLifeSteal.text = "LifeSteal Nv. 1";
+                return;
+            case 3:
+                textoCosteLifeSteal.text = costeMejoraLifeSteal.ToString();
+                textoLifeSteal.text = "LifeSteal Nv. Máximo";
                 return;
         }
     }

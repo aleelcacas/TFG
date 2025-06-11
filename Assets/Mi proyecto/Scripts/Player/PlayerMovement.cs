@@ -90,9 +90,8 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Vortereta()
     {
+        animator.Play("Player_Dash");
         playerColldier.excludeLayers = enemy;
-
-        transform.localScale = new Vector3(transform.localScale.x, 0.5f, transform.localScale.z);
 
         rb.gravityScale = 0;
 
@@ -110,8 +109,6 @@ public class PlayerMovement : MonoBehaviour
         PonerGravedad();
 
         playerColldier.excludeLayers = nada;
-        
-        transform.localScale = new Vector3(transform.localScale.x, 1f, transform.localScale.z);
         
         vortereta = true;
     }

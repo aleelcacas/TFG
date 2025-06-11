@@ -10,11 +10,18 @@ public class VidaJugador : MonoBehaviour
     private float currentHP;
     public Slider vidaSlider;
     private SpriteRenderer spriteRenderer;
+    public PlayerData playerData;
 
     void Start()
     {
+        VidaEnemigo.OnEnemyDied += Curarse;
         spriteRenderer = GetComponent<SpriteRenderer>();
         currentHP = MaxHP;
+    }
+
+    void OnDestroy()
+    {
+        VidaEnemigo.OnEnemyDied -= Curarse;
     }
 
     void Update()
@@ -48,6 +55,31 @@ public class VidaJugador : MonoBehaviour
         if (vidaSlider == null)
             return;
         vidaSlider.value = currentHP / MaxHP;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Pocion") && currentHP != MaxHP)
+        {
+            currentHP += 10;
+            collision.gameObject.SetActive(false);
+        }
+            
+    }
+
+    void Curarse(int tipoEnemigo)
+    {
+        switch (playerData.LifeSteal)
+        {
+            case 1:
+                return;
+            case 2:
+                currentHP += 5;
+                return;
+            case 3:
+                currentHP += 10;
+                return;
+        }
     }
 
     void Morir()

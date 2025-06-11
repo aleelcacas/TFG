@@ -3,7 +3,7 @@ using TMPro;
 public class PlayerManager : MonoBehaviour
 {
     public PlayerData playerData;
-    public TextMeshProUGUI oroText, nivelText, vidaText, ataquetext, velocidadText, oroRecibidoText;
+    public TextMeshProUGUI oroText, nivelText, vidaText, ataquetext, velocidadText, oroRecibidoText, mapaText, lifeStealText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +29,9 @@ public class PlayerManager : MonoBehaviour
         vidaText.text = "Vida Maxima = " + playerData.Vida.ToString();
         ataquetext.text = "Daño Ataque = " + playerData.Ataque.ToString();
         oroRecibidoText.text = "Oro Recibido = Nv." + playerData.OroRecibido.ToString();
+        mapaText.text = "Tamaño Mapa = Nv." + playerData.MapSize.ToString();
         ActualizarVelocidadUI();
+        ActualizarLifeStealUI();
     }
 
     void ActualizarVelocidadUI()
@@ -47,6 +49,22 @@ public class PlayerManager : MonoBehaviour
                 return;
             case 1.5f:
                 velocidadText.text = "Velocidad = Nv.4";
+                return;
+        }
+    }
+
+    void ActualizarLifeStealUI()
+    {
+        switch (playerData.LifeSteal)
+        {
+            case 1:
+                lifeStealText.text = "Robo de Vida = Nv.0";
+                return;
+            case 2:
+                lifeStealText.text = "Robo de Vida = Nv.1";
+                return;
+            case 3:
+                lifeStealText.text = "Robo de Vida = Nv.2";
                 return;
         }
     }

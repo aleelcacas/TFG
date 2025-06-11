@@ -11,13 +11,13 @@ public class LevelGeneratoPruebas : MonoBehaviour
     public Vector2 inicio;
     public Transform mapRoot;
     int numerodesalas;
+    public PlayerData playerData;
 
     void Start()
     {
-        gridSizeX = 4;
-        gridSizeY = 4;
-
-        numerodesalas = (int)Random.Range(10, 20);
+        gridSizeX = 5;
+        gridSizeY = 5;
+        NumeroSalas();
 
         numberOfRooms = numerodesalas;
         
@@ -25,6 +25,23 @@ public class LevelGeneratoPruebas : MonoBehaviour
         SetRoomDoors();
         DrawMap();
         GetComponent<SheetAssignerCopia>().Assign(rooms);
+    }
+
+    void NumeroSalas()
+    {
+        switch (playerData.MapSize)
+        {
+            case 1:
+                numerodesalas = Random.Range(8, 19);
+                return;
+            case 2:
+                numerodesalas = Random.Range(10, 25);
+                return;
+            case 3:
+                numerodesalas = Random.Range(16, 25);
+                return;
+        }
+        
     }
 
     void CreateRooms()

@@ -12,7 +12,7 @@ public class RoomManager : MonoBehaviour
     GameObject player;
     Vector3 gridPos;
     public bool salaTermianda, doorTop, doorBot, doorLeft, doorRight;
-    public GameObject doorUpOpen, doorBotOpen, doorRightOpen, doorLeftOpen, tpObject;
+    public GameObject doorUpOpen, doorBotOpen, doorRightOpen, doorLeftOpen, tpObject, pocion;
 
     void Start()
     {
@@ -38,6 +38,7 @@ public class RoomManager : MonoBehaviour
         if (enemigos.Count == 0)
         {
             tpObject.SetActive(true);
+            pocion.SetActive(true);
             TerminarSala();
             CambioSpriteMapa();
             salaTermianda = true;

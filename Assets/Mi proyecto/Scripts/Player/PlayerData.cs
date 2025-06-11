@@ -10,6 +10,8 @@ public class PlayerData : ScriptableObject
     int ataque;
     int vida;
     int oro;
+    int mapSize;
+    int lifeSteal;
 
     public int Nivel
     {
@@ -121,6 +123,50 @@ public class PlayerData : ScriptableObject
         }
     }
 
+    public int MapSize
+    {
+        get
+        {
+            if (mapSize <= 0)
+            {
+                if (!PlayerPrefs.HasKey("Player_MapSize"))
+                {
+                    MapSize = 1;
+                }
+
+                mapSize = PlayerPrefs.GetInt("Player_MapSize");
+            }
+            return mapSize;
+        }
+        set
+        {
+            mapSize = value;
+            PlayerPrefs.SetInt("Player_MapSize", mapSize);
+        }
+    }
+
+    public int LifeSteal
+    {
+        get
+        {
+            if (lifeSteal <= 0)
+            {
+                if (!PlayerPrefs.HasKey("Player_LifeSteal"))
+                {
+                    LifeSteal = 0;
+                }
+
+                lifeSteal = PlayerPrefs.GetInt("Player_LifeSteal");
+            }
+            return lifeSteal;
+        }
+        set
+        {
+            lifeSteal = value;
+            PlayerPrefs.SetInt("Player_LifeSteal", lifeSteal);
+        }
+    }
+
     public float extraVelocidad
     {
         get
@@ -151,7 +197,9 @@ public class PlayerData : ScriptableObject
         vida = -1;
         oro = -1;
         oroRecibido = -1;
-        extraVelocidad = 0.75f;
+        velocidad = 0.75f;
+        mapSize = 0;
+        lifeSteal = -1;
     }
 
     public void ResetValuesToCero()
@@ -162,5 +210,7 @@ public class PlayerData : ScriptableObject
         Oro = 0;
         OroRecibido = 1;
         extraVelocidad = 0.75f;
+        MapSize = 1;
+        LifeSteal = 1;
     } 
 }

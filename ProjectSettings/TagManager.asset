@@ -17,6 +17,7 @@ TagManager:
   - Mapa
   - RoomRoot
   - ObjetoTp
+  - Pocion
   layers:
   - Default
   - TransparentFX
