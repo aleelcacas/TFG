@@ -1,22 +1,29 @@
+using System;
 using System.Collections;
-using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class VidaJugador : MonoBehaviour
 {
     public float MaxHP;
+    private bool canTakeDamage;
     private float currentHP;
     public Slider vidaSlider;
+    public GameObject muerteUI, vidaOroUI;
     private SpriteRenderer spriteRenderer;
     public PlayerData playerData;
+    private Animator animator;
+    public static event Action OnPlayerDie;
 
     void Start()
     {
         VidaEnemigo.OnEnemyDied += Curarse;
         spriteRenderer = GetComponent<SpriteRenderer>();
         currentHP = MaxHP;
+        animator = GetComponent<Animator>();
+        canTakeDamage = true;
     }
 
     void OnDestroy()
@@ -31,9 +38,11 @@ public class VidaJugador : MonoBehaviour
 
     public void RecibirDaño(float damage)
     {
+        if (!canTakeDamage)
+            return;
         StartCoroutine(Destello());
         currentHP -= damage;
-        
+
         currentHP = Mathf.Clamp(currentHP, 0, MaxHP);
 
         ActualizarVidaUI();
@@ -64,7 +73,7 @@ public class VidaJugador : MonoBehaviour
             currentHP += 10;
             collision.gameObject.SetActive(false);
         }
-            
+
     }
 
     void Curarse(int tipoEnemigo)
@@ -84,6 +93,23 @@ public class VidaJugador : MonoBehaviour
 
     void Morir()
     {
+        OnPlayerDie?.Invoke();
+        canTakeDamage = false;
+        animator.Play("PlayerDie");
+        muerteUI.SetActive(true);
+        vidaOroUI.SetActive(false);
+        PlayerMovement pm = GetComponent<PlayerMovement>();
+        PlayerAttack pa = GetComponent<PlayerAttack>();
 
+        pm.enabled = false;
+        pa.enabled = false;
+
+        StartCoroutine(VolverMainMenu());
+    }
+
+    IEnumerator VolverMainMenu()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("MainMenu");
     }
 }

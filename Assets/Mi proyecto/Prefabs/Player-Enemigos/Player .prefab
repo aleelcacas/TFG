@@ -147,7 +147,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1160821071
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -5355658745289702147, guid: d0e4ef3428d1da14ca3ec8b772930655, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -269,6 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHP: 100
   vidaSlider: {fileID: 0}
+  muerteUI: {fileID: 0}
   playerData: {fileID: 11400000, guid: 57d2ee1c6e8eb8044b8c4671934d8158, type: 2}
 --- !u!114 &5831679396789806233
 MonoBehaviour:
