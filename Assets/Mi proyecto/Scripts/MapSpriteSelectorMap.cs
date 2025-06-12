@@ -10,11 +10,6 @@ public class MapSpriteSelectorMap : MonoBehaviour
 
     public int type;
     public Vector2 gridPos;
-
-    public Color normalColor, enterColor;
-
-    Color mainColor;
-
     Image rend;
     TeleportOnRoomEnded teleportOnRoomEnded;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,8 +17,6 @@ public class MapSpriteSelectorMap : MonoBehaviour
     {
         rend = GetComponent<Image>();
         teleportOnRoomEnded = GetComponent<TeleportOnRoomEnded>();
-        mainColor = normalColor;
-        PickColor();
         PickSprite();
         SetPositionReference();
         transform.localPosition = gridPos * new Vector2(220, 110) + new Vector2(540, 0);
@@ -117,19 +110,6 @@ public class MapSpriteSelectorMap : MonoBehaviour
         {
             rend.sprite = spL;
         }
-    }
-
-    void PickColor()
-    {
-        if (type == 0)
-        {
-            mainColor = normalColor;
-        }
-        else if (type == 1)
-        {
-            mainColor = enterColor;
-        }
-        rend.color = mainColor;
     }
 
     void SetPositionReference()

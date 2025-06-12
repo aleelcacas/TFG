@@ -20,7 +20,7 @@ public class LevelGeneratoPruebas : MonoBehaviour
         NumeroSalas();
 
         numberOfRooms = numerodesalas;
-        
+
         CreateRooms();
         SetRoomDoors();
         DrawMap();
@@ -51,7 +51,6 @@ public class LevelGeneratoPruebas : MonoBehaviour
         takenPositions.Insert(0, inicio);
         Vector2 checkPos;
 
-        //add rooms
         for (int i = 0; i < numberOfRooms - 1; i++)
         { 
             checkPos = NewPosition();
@@ -180,14 +179,13 @@ public class LevelGeneratoPruebas : MonoBehaviour
                 {
                     continue;
                 }
-                Vector2 gridPosition = new Vector2(x, y);
                 if (y - 1 < 0)
                 {
                     rooms[x, y].doorBot = false;
                 }
                 else
                 {
-                    rooms[x, y].doorBot = (rooms[x, y - 1] != null);
+                    rooms[x, y].doorBot = rooms[x, y - 1] != null;
                 }
                 if (y + 1 >= gridSizeY * 2)
                 {
@@ -195,7 +193,7 @@ public class LevelGeneratoPruebas : MonoBehaviour
                 }
                 else
                 {
-                    rooms[x, y].doorTop = (rooms[x, y + 1] != null);
+                    rooms[x, y].doorTop = rooms[x, y + 1] != null;
                 }
                 if (x - 1 < 0)
                 {
@@ -203,7 +201,7 @@ public class LevelGeneratoPruebas : MonoBehaviour
                 }
                 else
                 {
-                    rooms[x, y].doorLeft = (rooms[x - 1, y] != null);
+                    rooms[x, y].doorLeft = rooms[x - 1, y] != null;
                 }
                 if (x + 1 >= gridSizeX * 2)
                 {
@@ -211,7 +209,7 @@ public class LevelGeneratoPruebas : MonoBehaviour
                 }
                 else
                 {
-                    rooms[x, y].doorRight = (rooms[x + 1, y] != null);
+                    rooms[x, y].doorRight = rooms[x + 1, y] != null;
                 }
             }
         }
@@ -230,7 +228,6 @@ public class LevelGeneratoPruebas : MonoBehaviour
             drawPos.x *= 130;
             drawPos.y *= 70;
             MapSpriteSelectorMap mapper = Instantiate(roomWhiteObj, drawPos, Quaternion.identity).GetComponent<MapSpriteSelectorMap>();
-            mapper.type = room.type;
             mapper.gridPos = room.gridPos;
             mapper.up = room.doorTop;
             mapper.down = room.doorBot;
