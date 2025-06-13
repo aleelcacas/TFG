@@ -24,7 +24,7 @@ public class PlayerManager : MonoBehaviour
 
     void ActualizarUI()
     {
-        oroText.text = "Oro = " + playerData.Oro.ToString();
+        oroText.text = playerData.Oro.ToString();
         nivelText.text = "Nivel Jugador = " + playerData.Nivel.ToString();
         vidaText.text = "Vida Maxima = " + playerData.Vida.ToString();
         ataquetext.text = "Daño Ataque = " + playerData.Ataque.ToString();
