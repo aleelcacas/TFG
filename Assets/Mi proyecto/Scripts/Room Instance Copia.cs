@@ -13,17 +13,15 @@ public class RoomInstanceCopia : MonoBehaviour
     GameObject doorU, doorD, doorL, doorR, wallUp, wallDown, wallSides;
 
 
-    public void Setup(GameObject _prefab, Vector2 _gridPos, int _type,
+    public void Setup(GameObject _prefab, Vector2 _gridPos,
                         bool _doorTop, bool _doorBot, bool _doorLeft, bool _doorRight)
     {
         prefab = _prefab;
         gridPos = _gridPos;
-        type = _type;
         doorTop = _doorTop;
         doorBot = _doorBot;
         doorLeft = _doorLeft;
         doorRight = _doorRight;
-        //Instantiate(prefab, transform.position, Quaternion.identity);
         RoomManager roomManager = Instantiate(prefab, transform.position, Quaternion.identity).GetComponent<RoomManager>();
         roomManager.Referencias(doorTop, doorBot, doorLeft, doorRight, gridPos);
         MakeDoors();

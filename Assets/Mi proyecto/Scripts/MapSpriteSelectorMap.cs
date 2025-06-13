@@ -7,8 +7,6 @@ public class MapSpriteSelectorMap : MonoBehaviour
             spUD, spRL, spUR, spUL, spDR, spDL,
             spULD, spRUL, spDRU, spLDR, spUDLR;
     public bool up, down, left, right;
-
-    public int type;
     public Vector2 gridPos;
     Image rend;
     TeleportOnRoomEnded teleportOnRoomEnded;
