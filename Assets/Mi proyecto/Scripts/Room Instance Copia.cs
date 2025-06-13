@@ -7,7 +7,6 @@ public class RoomInstanceCopia : MonoBehaviour
 {
     public GameObject prefab;
     public Vector2 gridPos;
-    public int type;
     public bool doorTop, doorBot, doorLeft, doorRight;
     [SerializeField]
     GameObject doorU, doorD, doorL, doorR, wallUp, wallDown, wallSides;

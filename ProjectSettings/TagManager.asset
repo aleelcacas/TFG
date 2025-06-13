@@ -18,6 +18,7 @@ TagManager:
   - RoomRoot
   - ObjetoTp
   - Pocion
+  - Sala
   layers:
   - Default
   - TransparentFX

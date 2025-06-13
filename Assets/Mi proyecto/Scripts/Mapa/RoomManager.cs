@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class RoomManager : MonoBehaviour
@@ -17,6 +18,13 @@ public class RoomManager : MonoBehaviour
     void Start()
     {
         DondeEstoy();
+        foreach (GameObject enemigo in enemigos)
+        {
+            enemigo.SetActive(false);
+        }
+
+         if (gridPos == Vector3.zero)
+            StartCoroutine(JugadorEntra());
     }
 
     public void Referencias(bool _doorTop, bool _doorBot, bool _doorLeft, bool _doorRight, Vector2 _gridPos)
@@ -100,5 +108,14 @@ public class RoomManager : MonoBehaviour
         InteractuarTp interactuarTp = player.GetComponent<InteractuarTp>();
 
         interactuarTp.ActivarTp();
+    }
+
+    public IEnumerator JugadorEntra()
+    {
+        yield return new WaitForSeconds(1);
+        foreach (GameObject enemigo in enemigos)
+        {
+            enemigo.SetActive(true);
+        }
     }
 }

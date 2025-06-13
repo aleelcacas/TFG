@@ -5,7 +5,9 @@ using UnityEngine.UIElements;
 public class MovementBetweenRooms : MonoBehaviour
 {
     public GameObject camara;
+    public GameObject[] salas;
     public InteractuarTp interactuarTp;
+    private RoomManager roomManager;
     private Vector2 posicion, posicionOffset;
     public Animator animator;
     public Vector3 gridPos;
@@ -15,27 +17,29 @@ public class MovementBetweenRooms : MonoBehaviour
         posicion = Vector2.zero;
         posicionOffset = Vector2.zero;
 
+        salas = GameObject.FindGameObjectsWithTag("Sala");
+
         if (collision.CompareTag("Arriba"))
         {
-            interactuarTp.CambiarPosicionEnGrid(new Vector3(0,1,0));
+            interactuarTp.CambiarPosicionEnGrid(Vector3.up);
             CambiarSala(0);
         }
 
         if (collision.CompareTag("Abajo"))
         {
-            interactuarTp.CambiarPosicionEnGrid(new Vector3(0,-1,0));
+            interactuarTp.CambiarPosicionEnGrid(Vector3.down);
             CambiarSala(1);
         }
 
         if (collision.CompareTag("Izquierda"))
         {
-            interactuarTp.CambiarPosicionEnGrid(new Vector3(-1,0,0));
+            interactuarTp.CambiarPosicionEnGrid(Vector3.left);
             CambiarSala(2);
         }
 
         if (collision.CompareTag("Derecha"))
         {
-            interactuarTp.CambiarPosicionEnGrid(new Vector3(1,0,0));
+            interactuarTp.CambiarPosicionEnGrid(Vector3.right);
             CambiarSala(3);
         }
 
@@ -48,23 +52,45 @@ public class MovementBetweenRooms : MonoBehaviour
             case 0:
                 posicion = (gridPos + Vector3.up) * new Vector2(96, 52);
                 posicionOffset = posicion + new Vector2(-4, -13.5f);
+                EntradaSala();
                 StartCoroutine(AnimacionCamara());
                 return;
             case 1:
                 posicion = (gridPos + Vector3.down) * new Vector2(96, 52);
                 posicionOffset = posicion + new Vector2(0, 10);
+                EntradaSala();
                 StartCoroutine(AnimacionCamara());
                 return;
             case 2:
                 posicion = (gridPos + Vector3.left) * new Vector2(96, 52);
                 posicionOffset = posicion + new Vector2(21, -2);
+                EntradaSala();
                 StartCoroutine(AnimacionCamara());
                 return;
             case 3:
                 posicion = (gridPos + Vector3.right) * new Vector2(96, 52);
                 posicionOffset = posicion + new Vector2(-21, -2);
+                EntradaSala();
                 StartCoroutine(AnimacionCamara());
                 return;
+        }
+    }
+
+    void EntradaSala()
+    {
+        GameObject salaObjetivo;
+        foreach (GameObject sala in salas)
+        {
+            if (sala.transform.position == new Vector3(posicion.x, posicion.y, 0))
+            {
+                salaObjetivo = sala;
+                if (sala != null)
+                {
+                    roomManager = sala.GetComponent<RoomManager>();
+                    StartCoroutine(roomManager.JugadorEntra());
+                }
+            }
+            
         }
     }
 
