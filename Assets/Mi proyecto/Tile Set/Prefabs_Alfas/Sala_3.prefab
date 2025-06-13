@@ -2280,7 +2280,7 @@ GameObject:
   - component: {fileID: 2564798227284671254}
   m_Layer: 7
   m_Name: Sala_3
-  m_TagString: Untagged
+  m_TagString: Sala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

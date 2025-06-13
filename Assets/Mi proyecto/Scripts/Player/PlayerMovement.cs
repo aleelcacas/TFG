@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 detectorSize;
     public Transform floorDetector;
     public bool suelado, mirandoDerecha;
-    public bool vortereta;
+    public bool vortereta, vorteretaOnCD;
     public LayerMask ground, player, enemy, nada;
 
     void Start()
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
 
-        else if (InputManager.instance.DashPressed && vortereta)
+        else if (InputManager.instance.DashPressed && vortereta && !vorteretaOnCD)
         {
             vortereta = false;
             StartCoroutine(Vortereta());
@@ -90,27 +90,32 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Vortereta()
     {
+        vorteretaOnCD = true;
         animator.Play("Player_Dash");
         playerColldier.excludeLayers = enemy;
 
         rb.gravityScale = 0;
 
-        if(!mirandoDerecha)
+        if (!mirandoDerecha)
         {
             rb.linearVelocity = new Vector2(17, 0);
         }
-        else if(mirandoDerecha)
+        else if (mirandoDerecha)
         {
             rb.linearVelocity = new Vector2(-17, 0);
         }
-        
+
         yield return new WaitForSeconds(0.35f);
 
         PonerGravedad();
 
         playerColldier.excludeLayers = nada;
-        
+
         vortereta = true;
+
+        yield return new WaitForSeconds(0.5f);
+
+        vorteretaOnCD = false;
     }
 
     void PaDondeMiro()
