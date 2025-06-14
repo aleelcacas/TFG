@@ -16,7 +16,7 @@ public class LevelGeneratoPruebas : MonoBehaviour
     void Start()
     {
         gridSizeX = 5;
-        gridSizeY = 5;
+        gridSizeY = 4;
         NumeroSalas();
 
         numberOfRooms = numerodesalas;
@@ -32,13 +32,13 @@ public class LevelGeneratoPruebas : MonoBehaviour
         switch (playerData.MapSize)
         {
             case 1:
-                numerodesalas = Random.Range(8, 19);
+                numerodesalas = Random.Range(8, 17);
                 return;
             case 2:
-                numerodesalas = Random.Range(10, 25);
+                numerodesalas = Random.Range(10, 21);
                 return;
             case 3:
-                numerodesalas = Random.Range(16, 25);
+                numerodesalas = Random.Range(16, 23);
                 return;
         }
         
