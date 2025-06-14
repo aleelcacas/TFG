@@ -243,6 +243,7 @@ MonoBehaviour:
   suelado: 0
   mirandoDerecha: 0
   vortereta: 0
+  vorteretaOnCD: 0
   ground:
     serializedVersion: 2
     m_Bits: 128
@@ -270,6 +271,7 @@ MonoBehaviour:
   MaxHP: 100
   vidaSlider: {fileID: 0}
   muerteUI: {fileID: 0}
+  vidaOroUI: {fileID: 0}
   playerData: {fileID: 11400000, guid: 57d2ee1c6e8eb8044b8c4671934d8158, type: 2}
 --- !u!114 &5831679396789806233
 MonoBehaviour:
@@ -346,6 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camara: {fileID: 0}
+  salas: []
   interactuarTp: {fileID: 2984456882211416096}
   animator: {fileID: 0}
   gridPos: {x: 0, y: 0, z: 0}

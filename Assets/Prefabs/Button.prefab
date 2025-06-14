@@ -165,10 +165,7 @@ MonoBehaviour:
   down: 0
   left: 0
   right: 0
-  type: 0
   gridPos: {x: 0, y: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  enterColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &715580902832131021
 MonoBehaviour:
   m_ObjectHideFlags: 0

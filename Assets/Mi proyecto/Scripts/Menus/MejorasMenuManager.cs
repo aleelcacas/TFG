@@ -146,26 +146,26 @@ public class MejorasMenuManager : MonoBehaviour
             case 1:
                 costeMejoraOro = 50;
                 textoCosteOro.text = costeMejoraOro.ToString();
-                textoOro.text = "Oro Recibido Nv. 1";
+                textoOro.text = "Ganancia Nv. 1";
                 return;
             case 2:
                 costeMejoraOro = 100;
                 textoCosteOro.text = costeMejoraOro.ToString();
-                textoOro.text = "Oro Recibido Nv. 2";
+                textoOro.text = "Ganancia Nv. 2";
                 return;
             case 3:
                 costeMejoraOro = 150;
                 textoCosteOro.text = costeMejoraOro.ToString();
-                textoOro.text = "Oro Recibido Nv. 3";
+                textoOro.text = "Ganancia Nv. 3";
                 return;
             case 4:
                 costeMejoraOro = 250;
                 textoCosteOro.text = costeMejoraOro.ToString();
-                textoOro.text = "Oro Recibido Nv. 4";
+                textoOro.text = "Ganancia Nv. 4";
                 return;
             case 5:
                 textoCosteOro.text = "Nv. Máximo";
-                textoOro.text = "Oro Recibido Nv. 5";
+                textoOro.text = "Ganancia Nv. 5";
                 return;
         }
     }

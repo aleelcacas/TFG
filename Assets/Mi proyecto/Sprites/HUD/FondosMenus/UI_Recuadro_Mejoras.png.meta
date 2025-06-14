@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 1e7123fdfa892584c80a3cf9dc194c02
+guid: 6c4a90e14d84c0246b175f24cc7824fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -349501769233167598
-    second: UI_Buttons_0
-  - first:
-      213: 1002314541381079101
-    second: UI_Buttons_1
+      213: 3272745776320664412
+    second: UI_Recuadro_Mejoras_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,45 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Buttons_0
+      name: UI_Recuadro_Mejoras_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 10
-        width: 64
-        height: 32
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: de6505c5773c2d44c9baa5f49ed04572
-      internalID: -1068020517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Buttons_1
-      rect:
-        serializedVersion: 2
-        x: 175
-        y: 10
-        width: 64
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acbdfed61b1f26346aae79ee8590f0f3
-      internalID: 703128421
+      spriteID: c53d0cd91f02b6d20800000000000000
+      internalID: 3272745776320664412
       vertices: []
       indices: 
       edges: []
@@ -163,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 18cb4466452bd374cab0565e0c3be4b3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI_Buttons_0: -1068020517
-      UI_Buttons_1: 703128421
+      UI_Recuadro_Mejoras_0: 3272745776320664412
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

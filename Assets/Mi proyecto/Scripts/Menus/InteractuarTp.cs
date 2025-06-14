@@ -11,6 +11,7 @@ public class InteractuarTp : MonoBehaviour
     [SerializeField] private GameObject MapRoot;
     private PlayerMovement playerMovement;
     public GameObject seleccion;
+    public GameObject blackImage;
     public GameObject[] todos;
     private MovementBetweenRooms mv;
     public Vector3 posicionActualGrid, posicionBuscada;
@@ -64,6 +65,7 @@ public class InteractuarTp : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         BuscarSalas();
         salasEncontradas = true;
+        blackImage.SetActive(false);
         mapaInterfaz.SetActive(false);
     }
     void BuscarSalas()
