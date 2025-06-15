@@ -7,6 +7,7 @@ public class TeleportOnRoomEnded : MonoBehaviour
     Vector3 posicionTp;
     GameObject player, camara;
     InteractuarTp interactuarTp;
+    public AudioClip playerTPSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +24,7 @@ public class TeleportOnRoomEnded : MonoBehaviour
 
     public void TeleporPlayer()
     {
+        SFX_Manager.instance.PlaySFXClip(playerTPSound, transform, 1f);
         interactuarTp.CloseTeleporUI();
         posicionTp = new Vector3(posicionEnGrid.x * 96, posicionEnGrid.y * 52);
         player.transform.position = new Vector2(posicionTp.x -23, posicionTp.y -14);

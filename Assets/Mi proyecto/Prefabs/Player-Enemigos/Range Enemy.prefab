@@ -77,7 +77,6 @@ GameObject:
   - component: {fileID: 4844168247104927158}
   - component: {fileID: 7697852961241070267}
   - component: {fileID: 4308254063351135028}
-  - component: {fileID: 5805707090860546269}
   m_Layer: 10
   m_Name: Range Enemy
   m_TagString: EnemigoRango
@@ -273,6 +272,7 @@ MonoBehaviour:
   tiempoEntreAtaques: 2
   bala: {fileID: 9164529693244598764, guid: 38fee814cfdc6334f8181b11ddb01ccc, type: 3}
   puntoDisparo: {fileID: 8930821490066382471}
+  ataqueRangoSound: {fileID: 8300000, guid: b1eb64c290788034093b3e0a8ab2e1b2, type: 3}
 --- !u!114 &4308254063351135028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,18 +288,7 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 57d2ee1c6e8eb8044b8c4671934d8158, type: 2}
   tipoEnemigo: 1
   currentHP: 0
---- !u!114 &5805707090860546269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4797588981103876547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ac52a81303d2c4d97841c90fa787c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  soltarOroSound: {fileID: 8300000, guid: 5d12e465f7a4cf5429023a8a22a8fdaa, type: 3}
 --- !u!1 &8000881965010472757
 GameObject:
   m_ObjectHideFlags: 0

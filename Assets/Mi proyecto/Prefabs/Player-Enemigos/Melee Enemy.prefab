@@ -297,6 +297,7 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 57d2ee1c6e8eb8044b8c4671934d8158, type: 2}
   tipoEnemigo: 0
   currentHP: 0
+  soltarOroSound: {fileID: 8300000, guid: 5d12e465f7a4cf5429023a8a22a8fdaa, type: 3}
 --- !u!95 &6364701929715273530
 Animator:
   serializedVersion: 7
@@ -340,6 +341,7 @@ MonoBehaviour:
   puntoGolpe: {fileID: 162956498503930322}
   "tama\xF1oGolpe": {x: 1.5, y: 1}
   damage: 28
+  meleeAttackSound: {fileID: 8300000, guid: d70df72eb41606f4f98e601f32fd5618, type: 3}
 --- !u!1 &8456784626698734721
 GameObject:
   m_ObjectHideFlags: 0

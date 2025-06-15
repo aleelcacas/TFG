@@ -11,6 +11,7 @@ public class VidaEnemigo : MonoBehaviour
     private float MaxHP, maxHpMelee, maxHprango;
     public float currentHP;
     public static event Action<int> OnEnemyDied;
+    public AudioClip soltarOroSound;
 
     void Start()
     {
@@ -54,6 +55,7 @@ public class VidaEnemigo : MonoBehaviour
 
     void Morir()
     {
+        SFX_Manager.instance.PlaySFXClip(soltarOroSound, transform, 0.2f);
         OnEnemyDied?.Invoke(tipoEnemigo);
         Destroy(this.gameObject, 0.1f);
     }

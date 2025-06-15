@@ -273,6 +273,8 @@ MonoBehaviour:
   muerteUI: {fileID: 0}
   vidaOroUI: {fileID: 0}
   playerData: {fileID: 11400000, guid: 57d2ee1c6e8eb8044b8c4671934d8158, type: 2}
+  playerDamaged: {fileID: 8300000, guid: 5931226524fa77949bc1185f740f1d2f, type: 3}
+  playerHeal: {fileID: 8300000, guid: c9910446e3c863445a5ffc8fafd4ebe8, type: 3}
 --- !u!114 &5831679396789806233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 57d2ee1c6e8eb8044b8c4671934d8158, type: 2}
+  audioClip: {fileID: 8300000, guid: fb88671c3e4ca6d45bfbf29cd75ab0a2, type: 3}
   damage: 0
   atacando: 0
   enemy:
@@ -329,12 +332,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapaInterfaz: {fileID: 0}
   MapRoot: {fileID: 0}
+  dataManager: {fileID: 0}
   seleccion: {fileID: 0}
+  blackImage: {fileID: 0}
   todos: []
   posicionActualGrid: {x: 0, y: 0, z: 0}
   posicionBuscada: {x: 0, y: 0, z: 0}
   mapaAbierto: 0
   salasEncontradas: 0
+  pausaAbierta: 0
 --- !u!114 &473713217616180317
 MonoBehaviour:
   m_ObjectHideFlags: 0

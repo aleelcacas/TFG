@@ -22,6 +22,7 @@ public class FlyEnemy : MonoBehaviour
     private float dashTimeLeft = 0f;
     private bool isDashing = false, moving, despertando, agro;
     private Vector3 dashDirection;
+    public AudioClip flyEnemySound;
 
     void Start()
     {
@@ -94,6 +95,7 @@ public class FlyEnemy : MonoBehaviour
 
     void StartDash()
     {
+        SFX_Manager.instance.PlaySFXClip(flyEnemySound, transform, 1f);
         dashDirection = (player.transform.position - transform.position).normalized;
         isDashing = true;
         dashTimeLeft = dashDuration;

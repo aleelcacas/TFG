@@ -12,6 +12,8 @@ public class PlayerData : ScriptableObject
     int oro;
     int mapSize;
     int lifeSteal;
+    float volumenMusica;
+    float volumenSFX;
 
     public int Nivel
     {
@@ -189,6 +191,50 @@ public class PlayerData : ScriptableObject
         }
     }
 
+    public float VolumenMusica
+    {
+        get
+        {
+            if (volumenMusica <= 0)
+            {
+                if (!PlayerPrefs.HasKey("Volumen_Musica"))
+                {
+                    VolumenMusica = 0.75f;
+                }
+
+                volumenMusica = PlayerPrefs.GetFloat("Volumen_Musica");
+            }
+            return volumenMusica;
+        }
+        set
+        {
+            volumenMusica = value;
+            PlayerPrefs.SetFloat("Volumen_Musica", volumenMusica);
+        }
+    }
+
+    public float VolumenSFX
+    {
+        get
+        {
+            if (volumenSFX <= 0)
+            {
+                if (!PlayerPrefs.HasKey("Volumen_SFX"))
+                {
+                    VolumenSFX = 0.75f;
+                }
+
+                volumenSFX = PlayerPrefs.GetFloat("Volumen_SFX");
+            }
+            return volumenSFX;
+        }
+        set
+        {
+            volumenSFX = value;
+            PlayerPrefs.SetFloat("Volumen_SFX", volumenSFX);
+        }
+    }
+
 
     public void OnEnable()
     {
@@ -200,6 +246,8 @@ public class PlayerData : ScriptableObject
         velocidad = 0.75f;
         mapSize = 0;
         lifeSteal = -1;
+        volumenMusica = 0;
+        volumenSFX = 0;
     }
 
     public void ResetValuesToCero()
@@ -212,5 +260,7 @@ public class PlayerData : ScriptableObject
         extraVelocidad = 0.75f;
         MapSize = 1;
         LifeSteal = 1;
+        VolumenMusica = 0.5f;
+        VolumenSFX = 0.5f;
     } 
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public PlayerData playerData;
+    public AudioClip audioClip;
     public int damage;
     public bool atacando;
     private Rigidbody2D rb;
@@ -43,6 +44,7 @@ public class PlayerAttack : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         atacando = false;
     }
+
     public void HacerDaño()
     {
         Collider2D enemigo = Physics2D.OverlapBox(puntoGolpe.position, tamañoGolpe, 0f, enemy);
@@ -52,6 +54,11 @@ public class PlayerAttack : MonoBehaviour
         if (vidaEnemigo == null)
             return;
         vidaEnemigo.RecibirDaño(playerData.Ataque);
+    }
+
+    public void HacerSonido()
+    {
+        SFX_Manager.instance.PlaySFXClip(audioClip, transform, 0.5f);
     }
 
     void OnDrawGizmos()

@@ -13,7 +13,7 @@ public class MeleeAttack : MonoBehaviour
     public Transform puntoGolpe;
     public Vector2 tamañoGolpe = new Vector2(1.5f, 1f);
     public int damage;
-
+    public AudioClip meleeAttackSound;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -25,7 +25,6 @@ public class MeleeAttack : MonoBehaviour
     {
         if (Time.time - tiempoUltimoAtaque < tiempoEntreAtaques)
             return;
-
         tiempoUltimoAtaque = Time.time;
         animator.Play("EnemyMeleeAttack");
 
@@ -40,6 +39,7 @@ public class MeleeAttack : MonoBehaviour
     }
     public void RealizarGolpe()
     {
+        SFX_Manager.instance.PlaySFXClip(meleeAttackSound, transform, 1f);
         Collider2D jugador = Physics2D.OverlapBox(puntoGolpe.position, tamañoGolpe, 0f, playerLayer);
         if (jugador == null)
             return;

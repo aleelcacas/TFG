@@ -18,6 +18,7 @@ public class RangeEnemyMovement : MonoBehaviour
     private bool atacando;
     public GameObject bala;
     public Transform puntoDisparo;
+    public AudioClip ataqueRangoSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -141,6 +142,7 @@ public class RangeEnemyMovement : MonoBehaviour
         if (Time.time - tiempoUltimoAtaque < tiempoEntreAtaques)
             return;
 
+        SFX_Manager.instance.PlaySFXClip(ataqueRangoSound, transform, 0.2f);
         tiempoUltimoAtaque = Time.time;
 
         animator.Play("EnemigoRangoAttack");

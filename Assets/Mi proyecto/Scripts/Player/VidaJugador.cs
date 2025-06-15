@@ -15,6 +15,7 @@ public class VidaJugador : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public PlayerData playerData;
     private Animator animator;
+    public AudioClip playerDamaged, playerHeal, playerDieSound;
     public static event Action OnPlayerDie;
 
     void Start()
@@ -40,6 +41,8 @@ public class VidaJugador : MonoBehaviour
     {
         if (!canTakeDamage)
             return;
+
+        SFX_Manager.instance.PlaySFXClip(playerDamaged, transform, 1f);
         StartCoroutine(Destello());
         currentHP -= damage;
 
@@ -70,6 +73,7 @@ public class VidaJugador : MonoBehaviour
     {
         if (collision.CompareTag("Pocion") && currentHP != MaxHP)
         {
+            SFX_Manager.instance.PlaySFXClip(playerHeal, transform, 1f);
             currentHP += 10;
             collision.gameObject.SetActive(false);
         }
@@ -93,6 +97,7 @@ public class VidaJugador : MonoBehaviour
 
     void Morir()
     {
+        SFX_Manager.instance.PlaySFXClip(playerDieSound, transform, 1f);
         OnPlayerDie?.Invoke();
         canTakeDamage = false;
         animator.Play("PlayerDie");
