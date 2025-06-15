@@ -18,7 +18,7 @@ public class SheetAssignerCopia : MonoBehaviour
                 continue;
             }
             //int index = 0;
-            int index = Random.Range(0, 7);
+            int index = Random.Range(0, 10);
             Vector3 pos = new Vector3(room.gridPos.x * (roomDimensions.x + gutterSize.x),
                                         room.gridPos.y * (roomDimensions.y + gutterSize.y), 0);
             RoomInstanceCopia myRoom = Instantiate(RoomObj, pos, Quaternion.identity).GetComponent<RoomInstanceCopia>();

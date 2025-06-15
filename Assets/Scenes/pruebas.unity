@@ -302,6 +302,8 @@ MonoBehaviour:
   ataquetext: {fileID: 972701529}
   velocidadText: {fileID: 1603166320}
   oroRecibidoText: {fileID: 1901279764}
+  mapaText: {fileID: 0}
+  lifeStealText: {fileID: 0}
 --- !u!1 &49513326
 GameObject:
   m_ObjectHideFlags: 0
@@ -7492,11 +7494,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2101496597374703340, guid: 4ff74ec193a7140419337d05ff4be2e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.970144
+      value: -23.29
       objectReference: {fileID: 0}
     - target: {fileID: 2101496597374703340, guid: 4ff74ec193a7140419337d05ff4be2e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5860567
+      value: -43.96
       objectReference: {fileID: 0}
     - target: {fileID: 2101496597374703340, guid: 4ff74ec193a7140419337d05ff4be2e9, type: 3}
       propertyPath: m_LocalPosition.z

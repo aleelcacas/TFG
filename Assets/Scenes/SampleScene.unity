@@ -633,6 +633,9 @@ MonoBehaviour:
   - {fileID: 1632013012982188868, guid: d0f641e2bf71dd247a9f7d84f23a6173, type: 3}
   - {fileID: 8817587535596515500, guid: 197871aec018d23439bda396efbd301b, type: 3}
   - {fileID: 2081742888591089976, guid: 2a4300a7b31d42e4e9bdec10c2befb4e, type: 3}
+  - {fileID: 5975146956693769562, guid: 75e162a736e9e4841837fe9cd7373f9a, type: 3}
+  - {fileID: 4964127752220873847, guid: 48c6e63b17d403d4f9de91d99a4a3854, type: 3}
+  - {fileID: 4422315301163529868, guid: 2266036d8b6e86b4dae87fd722484feb, type: 3}
   RoomObj: {fileID: 4217513463879332449, guid: 60906495b523262429c2c6c73f6e9f91, type: 3}
   roomDimensions: {x: 56, y: 32}
   gutterSize: {x: 40, y: 20}
@@ -7420,11 +7423,11 @@ PrefabInstance:
       objectReference: {fileID: 1644587178}
     - target: {fileID: 2101496597374703340, guid: 4ff74ec193a7140419337d05ff4be2e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.1
+      value: -23.92
       objectReference: {fileID: 0}
     - target: {fileID: 2101496597374703340, guid: 4ff74ec193a7140419337d05ff4be2e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3
+      value: -1.97
       objectReference: {fileID: 0}
     - target: {fileID: 2101496597374703340, guid: 4ff74ec193a7140419337d05ff4be2e9, type: 3}
       propertyPath: m_LocalPosition.z
