@@ -10,17 +10,20 @@ public class InteractuarTp : MonoBehaviour
     [SerializeField] private GameObject mapaInterfaz;
     [SerializeField] private GameObject MapRoot;
     private PlayerMovement playerMovement;
+    public GameObject dataManager;
+    private MenuManager menuManager;
     public GameObject seleccion;
     public GameObject blackImage;
     public GameObject[] todos;
     private MovementBetweenRooms mv;
     public Vector3 posicionActualGrid, posicionBuscada;
-    public bool mapaAbierto, salasEncontradas;
+    public bool mapaAbierto, salasEncontradas, pausaAbierta;
     private bool canOpenTp;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        menuManager = dataManager.GetComponent<MenuManager>();
         Time.timeScale = 1;
         posicionActualGrid = Vector3.zero;
         mv = GetComponent<MovementBetweenRooms>();
@@ -40,10 +43,11 @@ public class InteractuarTp : MonoBehaviour
         mv.gridPos = posicionActualGrid;
 
 
-        if (InputManager.instance.InteractPressed && canOpenTp)
+        if (InputManager.instance.InteractPressed && canOpenTp && !pausaAbierta)
         {
             if (mapaAbierto)
             {
+                menuManager.tpAbierto = false;
                 playerMovement.enabled = true;
                 Time.timeScale = 1;
                 mapaInterfaz.SetActive(false);
@@ -51,6 +55,7 @@ public class InteractuarTp : MonoBehaviour
             }
             else
             {
+                menuManager.tpAbierto = true;
                 playerMovement.enabled = false;
                 Time.timeScale = 0;
                 mapaInterfaz.SetActive(true);

@@ -11,10 +11,15 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject ajustesMenuPrimero;
     [SerializeField] private GameObject controlesMenuPrimero;
     [SerializeField] private PlayerMovement playerMovement;
+    private GameObject player;
+    private InteractuarTp interactuarTp;
     private bool pausado;
+    public bool tpAbierto;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        interactuarTp = player.GetComponent<InteractuarTp>();
         pausado = false;
         UnPause();
         menuAjustes.SetActive(false);
@@ -24,7 +29,7 @@ public class MenuManager : MonoBehaviour
 
     void Update()
     {
-        if (InputManager.instance.PausaOpenCloseInput)
+        if (InputManager.instance.PausaOpenCloseInput && !tpAbierto)
         {
             if (!pausado)
             {
@@ -42,7 +47,7 @@ public class MenuManager : MonoBehaviour
     {
         pausado = true;
         Time.timeScale = 0f;
-
+        interactuarTp.pausaAbierta = true;
         playerMovement.enabled = false;
 
         OpenPauseMenu();
@@ -52,7 +57,7 @@ public class MenuManager : MonoBehaviour
     {
         pausado = false;
         Time.timeScale = 1f;
-
+        interactuarTp.pausaAbierta = false;
         playerMovement.enabled = true;
 
         CloseAllMenus();
