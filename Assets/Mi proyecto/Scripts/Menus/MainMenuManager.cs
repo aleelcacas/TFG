@@ -62,4 +62,9 @@ public class MainMenuManager : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(mejorasMenuPrimero);
     }
+
+    public void HacerSonido()
+    {
+
+    }
 }
