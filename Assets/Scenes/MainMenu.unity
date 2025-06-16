@@ -11571,9 +11571,9 @@ MonoBehaviour:
   m_MoveAction: {fileID: -1246895598473198080, guid: a5822551f2870564cb552d9ffe565c10, type: 3}
   m_SubmitAction: {fileID: 2064916234097673511, guid: a5822551f2870564cb552d9ffe565c10, type: 3}
   m_CancelAction: {fileID: -1967631576421560919, guid: a5822551f2870564cb552d9ffe565c10, type: 3}
-  m_LeftClickAction: {fileID: 8056856818456041789, guid: a5822551f2870564cb552d9ffe565c10, type: 3}
-  m_MiddleClickAction: {fileID: 3279352641294131588, guid: a5822551f2870564cb552d9ffe565c10, type: 3}
-  m_RightClickAction: {fileID: 3837173908680883260, guid: a5822551f2870564cb552d9ffe565c10, type: 3}
+  m_LeftClickAction: {fileID: 0}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
   m_ScrollWheelAction: {fileID: 4502412055082496612, guid: a5822551f2870564cb552d9ffe565c10, type: 3}
   m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: a5822551f2870564cb552d9ffe565c10, type: 3}
   m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: a5822551f2870564cb552d9ffe565c10, type: 3}

@@ -159,13 +159,8 @@ public class MejorasMenuManager : MonoBehaviour
                 textoOro.text = "Ganancia Nv. 3";
                 return;
             case 4:
-                costeMejoraOro = 250;
-                textoCosteOro.text = costeMejoraOro.ToString();
-                textoOro.text = "Ganancia Nv. 4";
-                return;
-            case 5:
                 textoCosteOro.text = "Nv. Máximo";
-                textoOro.text = "Ganancia Nv. 5";
+                textoOro.text = "Ganancia Nv. 4";
                 return;
         }
     }
@@ -211,8 +206,8 @@ public class MejorasMenuManager : MonoBehaviour
                 costeMejoraMapa = 150;
                 return;
             case 3:
-                textoCosteMapa.text = costeMejoraMapa.ToString();
-                textoMapSize.text = "MapSize Nv. Máximo";
+                textoCosteMapa.text = "Nv. Máximo";
+                textoMapSize.text = "MapSize Nv. 3";
                 return;
         }
     }
@@ -232,8 +227,8 @@ public class MejorasMenuManager : MonoBehaviour
                 textoLifeSteal.text = "LifeSteal Nv. 1";
                 return;
             case 3:
-                textoCosteLifeSteal.text = costeMejoraLifeSteal.ToString();
-                textoLifeSteal.text = "LifeSteal Nv. Máximo";
+                textoCosteLifeSteal.text = "Nv. Máximo";
+                textoLifeSteal.text = "LifeSteal Nv. 2";
                 return;
         }
     }

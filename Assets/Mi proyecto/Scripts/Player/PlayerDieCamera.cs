@@ -28,6 +28,6 @@ public class PlayerDieCamera : MonoBehaviour
     void Update()
     {
         if (playerDead)
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 0.05f);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 0.05f); Debug.Log("veoalplayer");
     }
 }
