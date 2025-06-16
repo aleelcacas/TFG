@@ -243,7 +243,7 @@ public class PlayerData : ScriptableObject
         vida = -1;
         oro = -1;
         oroRecibido = -1;
-        velocidad = 0.75f;
+        velocidad = 0f;
         mapSize = 0;
         lifeSteal = -1;
         volumenMusica = 0;
@@ -256,10 +256,10 @@ public class PlayerData : ScriptableObject
         Ataque = 1;
         Vida = 100;
         Oro = 0;
-        OroRecibido = 1;
+        OroRecibido = 0;
         extraVelocidad = 0.75f;
         MapSize = 1;
-        LifeSteal = 1;
+        LifeSteal = 0;
         VolumenMusica = 0.5f;
         VolumenSFX = 0.5f;
     } 

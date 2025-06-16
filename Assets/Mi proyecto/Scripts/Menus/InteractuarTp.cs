@@ -114,6 +114,7 @@ public class InteractuarTp : MonoBehaviour
 
     public void CloseTeleporUI()
     {
+        menuManager.tpAbierto = false;
         playerMovement.enabled = true;
         Time.timeScale = 1;
         mapaInterfaz.SetActive(false);

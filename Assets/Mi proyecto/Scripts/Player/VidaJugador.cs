@@ -74,7 +74,7 @@ public class VidaJugador : MonoBehaviour
         if (collision.CompareTag("Pocion") && currentHP != MaxHP)
         {
             SFX_Manager.instance.PlaySFXClip(playerHeal, transform, 1f);
-            currentHP += 10;
+            currentHP += 15;
             collision.gameObject.SetActive(false);
         }
 

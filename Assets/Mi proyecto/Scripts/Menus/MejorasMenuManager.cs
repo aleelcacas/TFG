@@ -143,22 +143,22 @@ public class MejorasMenuManager : MonoBehaviour
     {
         switch (playerData.OroRecibido)
         {
-            case 1:
+            case 0:
                 costeMejoraOro = 50;
                 textoCosteOro.text = costeMejoraOro.ToString();
                 textoOro.text = "Ganancia Nv. 1";
                 return;
-            case 2:
+            case 1:
                 costeMejoraOro = 100;
                 textoCosteOro.text = costeMejoraOro.ToString();
                 textoOro.text = "Ganancia Nv. 2";
                 return;
-            case 3:
+            case 2:
                 costeMejoraOro = 150;
                 textoCosteOro.text = costeMejoraOro.ToString();
                 textoOro.text = "Ganancia Nv. 3";
                 return;
-            case 4:
+            case 3:
                 textoCosteOro.text = "Nv. Máximo";
                 textoOro.text = "Ganancia Nv. 4";
                 return;
@@ -216,17 +216,17 @@ public class MejorasMenuManager : MonoBehaviour
     {
         switch (playerData.LifeSteal)
         {
-            case 1:
+            case 0:
                 costeMejoraLifeSteal = 150;
                 textoCosteLifeSteal.text = costeMejoraLifeSteal.ToString();
                 textoLifeSteal.text = "LifeSteal Nv. 0";
                 return;
-            case 2:
+            case 1:
                 costeMejoraLifeSteal = 300;
                 textoCosteLifeSteal.text = costeMejoraLifeSteal.ToString();
                 textoLifeSteal.text = "LifeSteal Nv. 1";
                 return;
-            case 3:
+            case 2:
                 textoCosteLifeSteal.text = "Nv. Máximo";
                 textoLifeSteal.text = "LifeSteal Nv. 2";
                 return;

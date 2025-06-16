@@ -28,10 +28,10 @@ public class PlayerManager : MonoBehaviour
         nivelText.text = "Nivel Jugador = " + playerData.Nivel.ToString();
         vidaText.text = "Vida Maxima = " + playerData.Vida.ToString();
         ataquetext.text = "Daño Ataque = " + playerData.Ataque.ToString();
-        oroRecibidoText.text = "Oro Recibido = Nv." + playerData.OroRecibido.ToString();
         mapaText.text = "Tamaño Mapa = Nv." + playerData.MapSize.ToString();
         ActualizarVelocidadUI();
         ActualizarLifeStealUI();
+        ActualizarOroUI();
     }
 
     void ActualizarVelocidadUI()
@@ -57,14 +57,33 @@ public class PlayerManager : MonoBehaviour
     {
         switch (playerData.LifeSteal)
         {
-            case 1:
+            case 0:
                 lifeStealText.text = "Robo de Vida = Nv.0";
                 return;
-            case 2:
+            case 1:
                 lifeStealText.text = "Robo de Vida = Nv.1";
                 return;
-            case 3:
+            case 2:
                 lifeStealText.text = "Robo de Vida = Nv.2";
+                return;
+        }
+    }
+
+    void ActualizarOroUI()
+    {
+        switch (playerData.OroRecibido)
+        {
+            case 0:
+                oroRecibidoText.text = "Oro Recibido = Nv. 1";
+                return;
+            case 1:
+                oroRecibidoText.text = "Oro Recibido = Nv. 2";
+                return;
+            case 2:
+                oroRecibidoText.text = "Oro Recibido = Nv. 3";
+                return;
+            case 3:
+                oroRecibidoText.text = "Oro Recibido = Nv. 4";
                 return;
         }
     }
