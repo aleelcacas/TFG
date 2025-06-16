@@ -97,6 +97,7 @@ public class VidaJugador : MonoBehaviour
 
     void Morir()
     {
+        spriteRenderer.sortingLayerName = "Detalles";
         SFX_Manager.instance.PlaySFXClip(playerDieSound, transform, 1f);
         OnPlayerDie?.Invoke();
         canTakeDamage = false;
