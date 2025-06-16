@@ -8,10 +8,6 @@ public class Volumen : MonoBehaviour
     public TextMeshProUGUI sfxVolActual;
     private float vl1;
     private float vl2;
-    void Start()
-    {
-
-    }
 
     void Update()
     {
@@ -41,6 +37,7 @@ public class Volumen : MonoBehaviour
         if (playerData.VolumenSFX >= 1)
             return;
         playerData.VolumenSFX += 0.1f;
+        playerData.VolumenSFX = Mathf.Clamp(playerData.VolumenSFX, 0.0001f, 1f);
     }
 
     public void SFXDown()
@@ -48,5 +45,6 @@ public class Volumen : MonoBehaviour
         if (playerData.VolumenSFX <= 0)
             return;
         playerData.VolumenSFX -= 0.1f;
+        playerData.VolumenSFX = Mathf.Clamp(playerData.VolumenSFX, 0.0001f, 1f);
     }
 }

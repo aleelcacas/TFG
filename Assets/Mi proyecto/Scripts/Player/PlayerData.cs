@@ -199,7 +199,7 @@ public class PlayerData : ScriptableObject
             {
                 if (!PlayerPrefs.HasKey("Volumen_Musica"))
                 {
-                    VolumenMusica = 0.75f;
+                    VolumenMusica = 0.5f;
                 }
 
                 volumenMusica = PlayerPrefs.GetFloat("Volumen_Musica");
@@ -221,7 +221,7 @@ public class PlayerData : ScriptableObject
             {
                 if (!PlayerPrefs.HasKey("Volumen_SFX"))
                 {
-                    VolumenSFX = 0.75f;
+                    VolumenSFX = 0.5f;
                 }
 
                 volumenSFX = PlayerPrefs.GetFloat("Volumen_SFX");

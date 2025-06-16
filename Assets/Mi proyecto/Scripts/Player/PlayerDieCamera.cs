@@ -5,12 +5,10 @@ public class PlayerDieCamera : MonoBehaviour
 {
     GameObject player;
     bool playerDead;
-    Animator animator;
     void Start()
     {
         playerDead = false;
         player = GameObject.FindGameObjectWithTag("Player");
-        animator = GetComponent<Animator>();
         VidaJugador.OnPlayerDie += ZoomPlayer;
     }
 
@@ -22,7 +20,6 @@ public class PlayerDieCamera : MonoBehaviour
     void ZoomPlayer()
     {
         playerDead = true;
-        animator.Play("ZoomCamara");
     }
 
     void Update()
