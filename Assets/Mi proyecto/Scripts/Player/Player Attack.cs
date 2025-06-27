@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask enemy;
     public Vector2 tamañoGolpe = new Vector2(1.5f, 1f);
     public Transform puntoGolpe;
-    private VidaEnemigo vidaEnemigo;
+    private EnemyHealth vidaEnemigo;
     private PlayerMovement playerMovement;
     void Start()
     {
@@ -50,7 +50,7 @@ public class PlayerAttack : MonoBehaviour
         Collider2D enemigo = Physics2D.OverlapBox(puntoGolpe.position, tamañoGolpe, 0f, enemy);
         if (enemigo == null)
             return;
-        vidaEnemigo = enemigo.gameObject.GetComponent<VidaEnemigo>();
+        vidaEnemigo = enemigo.gameObject.GetComponent<EnemyHealth>();
         if (vidaEnemigo == null)
             return;
         vidaEnemigo.RecibirDaño(playerData.Ataque);

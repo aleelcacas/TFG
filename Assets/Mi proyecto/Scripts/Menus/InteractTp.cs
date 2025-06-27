@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InteractuarTp : MonoBehaviour
+public class InteractTp : MonoBehaviour
 {
     [SerializeField] private GameObject mapaInterfaz;
     [SerializeField] private GameObject MapRoot;

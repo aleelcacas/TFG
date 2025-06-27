@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class MejorasMenuManager : MonoBehaviour
+public class UpgradesMenuManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textoAtaque, textoVida, textoVelocidad, textoOro, oroActual, textoMapSize, textoLifeSteal;
     [SerializeField] private TextMeshProUGUI textoCosteAtaque, textoCosteVida, textoCosteVelocidad, textoCosteOro, textoCosteMapa, textoCosteLifeSteal;

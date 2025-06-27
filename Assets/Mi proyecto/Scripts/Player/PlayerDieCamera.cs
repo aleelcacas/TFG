@@ -9,12 +9,12 @@ public class PlayerDieCamera : MonoBehaviour
     {
         playerDead = false;
         player = GameObject.FindGameObjectWithTag("Player");
-        VidaJugador.OnPlayerDie += ZoomPlayer;
+        PlayerHealth.OnPlayerDie += ZoomPlayer;
     }
 
     void OnDestroy()
     {
-        VidaJugador.OnPlayerDie -= ZoomPlayer;
+        PlayerHealth.OnPlayerDie -= ZoomPlayer;
     }
 
     void ZoomPlayer()

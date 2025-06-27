@@ -6,7 +6,7 @@ public class MovementBetweenRooms : MonoBehaviour
 {
     public GameObject camara;
     public GameObject[] salas;
-    public InteractuarTp interactuarTp;
+    public InteractTp interactuarTp;
     private RoomManager roomManager;
     private Vector2 posicion, posicionOffset;
     public Animator animator;

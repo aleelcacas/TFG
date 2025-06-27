@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class Volumen : MonoBehaviour
+public class Volume : MonoBehaviour
 {
     public TextMeshProUGUI musicaVolActual;
     public PlayerData playerData;

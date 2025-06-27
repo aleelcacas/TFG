@@ -4,7 +4,7 @@ using UnityEngine;
 public class MeleeAttack : MonoBehaviour
 {
     private Animator animator;
-    private VidaJugador vidaJugador;
+    private PlayerHealth vidaJugador;
     public PlayerData playerData;
     public float tiempoEntreAtaques = 1f;
     private float tiempoUltimoAtaque = -Mathf.Infinity;
@@ -43,7 +43,7 @@ public class MeleeAttack : MonoBehaviour
         Collider2D jugador = Physics2D.OverlapBox(puntoGolpe.position, tamañoGolpe, 0f, playerLayer);
         if (jugador == null)
             return;
-        vidaJugador = jugador.gameObject.GetComponent<VidaJugador>();
+        vidaJugador = jugador.gameObject.GetComponent<PlayerHealth>();
         if (jugador != null)
         {
             vidaJugador.RecibirDaño(damage);

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 
-public class LevelGeneratoPruebas : MonoBehaviour
+public class LevelGenerator : MonoBehaviour
 {
     Room[,] rooms;
     List<Vector2> takenPositions = new List<Vector2>();
@@ -24,7 +24,7 @@ public class LevelGeneratoPruebas : MonoBehaviour
         CreateRooms();
         SetRoomDoors();
         DrawMap();
-        GetComponent<SheetAssignerCopia>().Assign(rooms);
+        GetComponent<SheetAssigner>().Assign(rooms);
     }
 
     void NumeroSalas()
@@ -227,7 +227,7 @@ public class LevelGeneratoPruebas : MonoBehaviour
             Vector2 drawPos = room.gridPos;
             drawPos.x *= 130;
             drawPos.y *= 70;
-            MapSpriteSelectorMap mapper = Instantiate(roomWhiteObj, drawPos, Quaternion.identity).GetComponent<MapSpriteSelectorMap>();
+            MapSpriteSelector mapper = Instantiate(roomWhiteObj, drawPos, Quaternion.identity).GetComponent<MapSpriteSelector>();
             mapper.gridPos = room.gridPos;
             mapper.up = room.doorTop;
             mapper.down = room.doorBot;

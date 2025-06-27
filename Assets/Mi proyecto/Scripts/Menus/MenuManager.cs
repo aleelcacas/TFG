@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject controlesMenuPrimero;
     [SerializeField] private PlayerMovement playerMovement;
     private GameObject player;
-    private InteractuarTp interactuarTp;
+    private InteractTp interactuarTp;
     private bool pausado;
     public bool tpAbierto;
 
@@ -21,7 +21,7 @@ public class MenuManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         player = GameObject.FindGameObjectWithTag("Player");
-        interactuarTp = player.GetComponent<InteractuarTp>();
+        interactuarTp = player.GetComponent<InteractTp>();
         pausado = false;
         UnPause();
         menuAjustes.SetActive(false);

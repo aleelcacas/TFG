@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BalaMovement : MonoBehaviour
+public class BulletMovement : MonoBehaviour
 {
     public float velocidad = 15f;
     public float tiempoVida = 5f;
@@ -41,7 +41,7 @@ public class BalaMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            VidaJugador vidaJugador = collision.gameObject.GetComponent<VidaJugador>();
+            PlayerHealth vidaJugador = collision.gameObject.GetComponent<PlayerHealth>();
             vidaJugador.RecibirDaño(damage);
             Destroy(this.gameObject);
         }   

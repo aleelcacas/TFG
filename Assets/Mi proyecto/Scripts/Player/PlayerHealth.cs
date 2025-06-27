@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class VidaJugador : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     public float MaxHP;
     private bool canTakeDamage;
@@ -20,7 +20,7 @@ public class VidaJugador : MonoBehaviour
 
     void Start()
     {
-        VidaEnemigo.OnEnemyDied += Curarse;
+        EnemyHealth.OnEnemyDied += Curarse;
         spriteRenderer = GetComponent<SpriteRenderer>();
         currentHP = MaxHP;
         animator = GetComponent<Animator>();
@@ -29,7 +29,7 @@ public class VidaJugador : MonoBehaviour
 
     void OnDestroy()
     {
-        VidaEnemigo.OnEnemyDied -= Curarse;
+        EnemyHealth.OnEnemyDied -= Curarse;
     }
 
     void Update()
@@ -84,12 +84,12 @@ public class VidaJugador : MonoBehaviour
     {
         switch (playerData.LifeSteal)
         {
-            case 1:
+            case 0:
                 return;
-            case 2:
+            case 1:
                 currentHP += 5;
                 return;
-            case 3:
+            case 2:
                 currentHP += 10;
                 return;
         }

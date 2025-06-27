@@ -104,7 +104,7 @@ public class RoomManager : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        InteractuarTp interactuarTp = player.GetComponent<InteractuarTp>();
+        InteractTp interactuarTp = player.GetComponent<InteractTp>();
 
         interactuarTp.ActivarTp();
     }

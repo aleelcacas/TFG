@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlyEnemy : MonoBehaviour
 {
-    private VidaJugador vidaJugador;
+    private PlayerHealth vidaJugador;
     public float damage = 10;
     public float detectionRadius = 10f;
     public float followSpeed = 3f;
@@ -115,7 +115,7 @@ public class FlyEnemy : MonoBehaviour
     {
         if (collision.CompareTag("Player") && isDashing)
         {
-            vidaJugador = collision.gameObject.GetComponent<VidaJugador>();
+            vidaJugador = collision.gameObject.GetComponent<PlayerHealth>();
 
             if (vidaJugador != null)
             {
